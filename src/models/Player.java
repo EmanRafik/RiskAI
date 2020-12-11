@@ -1,0 +1,51 @@
+package models;
+
+import java.util.List;
+
+public abstract class Player {
+	/**
+	 * score represents the current score of the player
+	 * color represents the actual color of the player on the map
+	 * 0 -> red 1 -> blue
+	 * territories is a list of the territories' ids held by the player
+	 */
+	private int score, color, playerID;
+	private List<Integer> territories;
+	
+	public abstract void play();
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public int getColor() {
+		return color;
+	}
+
+	public void setColor(int color) {
+		this.color = color;
+	}
+
+	public int getPlayerID() {
+		return playerID;
+	}
+
+	public void setPlayerID(int playerID) {
+		this.playerID = playerID;
+	}
+
+	public List<Integer> getTerritories() {
+		return territories;
+	}
+
+	public void setTerritories(List<Integer> territories) {
+		this.territories = territories;
+	}
+	
+	
+	
+}
