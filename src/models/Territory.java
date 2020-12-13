@@ -50,7 +50,4 @@ public class Territory {
 		this.troopsCount = troopsCount;
 	}
 	
-	
-	
-	
 }
