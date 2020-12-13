@@ -12,6 +12,11 @@ public abstract class Player {
 	private int score, color, playerID;
 	private List<Integer> territories;
 	
+	public Player(int id) {
+		this.score = 0;
+		this.playerID = id;
+	}
+	
 	public abstract void play();
 
 	public int getScore() {
@@ -46,6 +51,8 @@ public abstract class Player {
 		this.territories = territories;
 	}
 	
-	
+	public int calculateBonusArmay() {
+		return Math.max(3, territories.size() / 3);
+	}
 	
 }

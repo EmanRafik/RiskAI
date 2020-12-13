@@ -1,5 +1,18 @@
 package models.agents;
 
-public class AStarAgent {
+import models.Player;
+
+public class AStarAgent extends Player {
+
+	public AStarAgent(int id) {
+		super(id);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void play() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
