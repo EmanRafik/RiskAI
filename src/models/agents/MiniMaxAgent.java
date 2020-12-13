@@ -4,6 +4,10 @@ import models.Player;
 
 public class MiniMaxAgent extends Player {
 
+	public MiniMaxAgent(int id) {
+		super(id);
+	}
+
 	@Override
 	public void play() {
 		// TODO Auto-generated method stub
