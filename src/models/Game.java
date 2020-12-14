@@ -54,6 +54,10 @@ public class Game {
 		return territories;
 	}
 
+	public static void setTerritories(Territory[] territories) {
+		Game.territories = territories;
+	}
+
 	public static void setCurrentPlayerId(int currentPlayerId) {
 		Game.currentPlayerId = currentPlayerId;
 	}
