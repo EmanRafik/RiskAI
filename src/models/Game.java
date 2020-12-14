@@ -127,6 +127,8 @@ public class Game {
 			territories[26].setAdjacentTerrs(new ArrayList<Integer>(List.of(25)));
 			territories[27] = new Territory(27);
 			territories[27].setAdjacentTerrs(new ArrayList<Integer>(List.of(21, 23, 26)));
+			
+			initializeTerritories(20);
 		}
 		if (gameMap == 1) {
 			// ToDo: Initialize the territories according to United States' map
@@ -175,5 +177,29 @@ public class Game {
 	
 	private static int getNextPlayer() {
 		return 1 - currentPlayerId;
+	}
+	
+	private static void initializeTerritories(int playerArmy) {
+		ArrayList<Integer> permutation = new ArrayList<Integer>();
+		for (int i = 1; i < territories.length; i++) {
+			permutation.add(i);
+		}
+		java.util.Collections.shuffle(permutation);
+		for (int i = 0; i < permutation.size(); i++) {
+			int idx = permutation.get(i);
+			if (2 * i > permutation.size())territories[idx].setHolderID(0);
+			else territories[idx].setHolderID(1);
+			territories[idx].setTroopsCount(1);
+		}
+		playerArmy -= permutation.size();
+		java.util.Collections.shuffle(permutation);
+		int i = 0;
+		while (playerArmy > 0) {
+			int idx = permutation.get(i);
+			territories[idx].setTroopsCount(territories[idx].getTroopsCount() + 1);
+			playerArmy--;
+			i++;
+			if (i == permutation.size()) i = 0;
+		}
 	}
 }
