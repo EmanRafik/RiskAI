@@ -56,9 +56,11 @@ public class ChangeScenesController {
 	}
 
 	// go to Egypt's map
+	// In this case we need to set the game configuration to have the corresponding
+	// GUI components to be dealt with interactively
 	public void goToEgypt(ActionEvent event) throws IOException {
 		FXMLLoader loader = new FXMLLoader(Main.class.getResource("EgyptMap.fxml"));
-		changeScene(loader, event, true);
+		changeSceneKeepConfig(loader, event, true);
 	}
 
 	private Stage getStage(ActionEvent event) {
@@ -72,9 +74,21 @@ public class ChangeScenesController {
 		stage.setScene(chooseMapScene);
 	}
 
+	@SuppressWarnings("unused")
 	private void changeScene(FXMLLoader loader, ActionEvent event, boolean fullScreen) throws IOException {
 		Parent root = loader.load();
 		Scene chooseMapScene = new Scene(root);
+		Stage stage = getStage(event);
+		stage.setScene(chooseMapScene);
+		stage.setFullScreen(fullScreen);
+	}
+
+	// Changes the scene and also keeps the game configuration for the components of
+	// the GUI to interact with
+	private void changeSceneKeepConfig(FXMLLoader loader, ActionEvent event, boolean fullScreen) throws IOException {
+		Parent root = loader.load();
+		Scene chooseMapScene = new Scene(root);
+		GameConfig.fillComponents(root);
 		Stage stage = getStage(event);
 		stage.setScene(chooseMapScene);
 		stage.setFullScreen(fullScreen);

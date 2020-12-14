@@ -1,9 +1,19 @@
 package models;
 
+import java.util.List;
+
 public class Territory {
-	private static int count = 0;
 	int territoryID, holderID, troopsCount;
+	List<Integer> adjacentTerrs;
 	
+	public List<Integer> getAdjacentTerrs() {
+		return adjacentTerrs;
+	}
+
+	public void setAdjacentTerrs(List<Integer> adjacentTerrs) {
+		this.adjacentTerrs = adjacentTerrs;
+	}
+
 	public int getTerritoryID() {
 		return territoryID;
 	}
@@ -28,9 +38,16 @@ public class Territory {
 		this.troopsCount = troopsCount;
 	}
 
-	public Territory(int playerID, int troopsCount) {
-		this.territoryID = Territory.count++;
+	public Territory(int ID) {
+		this.territoryID = ID;
+		this.holderID = 0;
+		this.troopsCount = 0;
+	}
+	
+	public Territory(int ID, int playerID, int troopsCount) {
+		this.territoryID = ID;
 		this.holderID = playerID;
 		this.troopsCount = troopsCount;
 	}
+	
 }
