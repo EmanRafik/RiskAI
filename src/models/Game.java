@@ -3,6 +3,7 @@ package models;
 import java.util.ArrayList;
 import java.util.List;
 
+import controller.GameConfig;
 import models.agents.GreedyAgent;
 import models.agents.HumanAgent;
 
@@ -13,9 +14,7 @@ public class Game {
 	 */
 	private static Game instance;
 	/**
-	 * integer holding the current game map
-	 *  0 -> Egypt
-	 *  1 -> USA
+	 * integer holding the current game map 0 -> Egypt 1 -> USA
 	 */
 	private static int gameMap;
 	/**
@@ -27,13 +26,10 @@ public class Game {
 	 */
 	private static Player[] players;
 	/**
-	 * Integer representing the game mode
-	 * 0 -> Playing mode
-	 * 1 -> Simulation mode
+	 * Integer representing the game mode 0 -> Playing mode 1 -> Simulation mode
 	 */
 	private static int gameMode;
-	
-	
+
 	public static int getCurrentPlayerId() {
 		return currentPlayerId;
 	}
@@ -59,9 +55,10 @@ public class Game {
 	}
 
 	private static int currentPlayerId;
-	
+
 	/**
 	 * Class constructor to initialize the game
+	 * 
 	 * @param gameMap
 	 * @param players
 	 * @param gameMode
@@ -127,14 +124,14 @@ public class Game {
 			territories[26].setAdjacentTerrs(new ArrayList<Integer>(List.of(25)));
 			territories[27] = new Territory(27);
 			territories[27].setAdjacentTerrs(new ArrayList<Integer>(List.of(21, 23, 26)));
-			
-			initializeTerritories(20);
+
+			initializeTerritories(40);
 		}
 		if (gameMap == 1) {
 			// ToDo: Initialize the territories according to United States' map
 		}
 	}
-	
+
 	public static synchronized Game getInstance() {
 		if (instance == null) {
 			players = new Player[2];
@@ -144,41 +141,67 @@ public class Game {
 		}
 		return instance;
 	}
-	
+
 	public static synchronized Game getInstance(int gameMap, Player[] players, int gameMode) {
 		if (instance == null) {
 			instance = new Game(gameMap, players, gameMode);
 		}
 		return instance;
 	}
-	
-	
-	
+
 	/**
-	 * Main Game loop method
+	 * Main Game methods
 	 */
+	// perform the first part of the turn
+	public static void distributeTroops() {
+		players[currentPlayerId].distributedBonusTroops();
+	}
+
+	// perform the second part of the turn
+	public static void performAttacks() {
+		players[currentPlayerId].performAttacks();
+	}
+
 	public static void run() {
 		while (!isFinalState()) {
 			players[currentPlayerId].play();
 			currentPlayerId = getNextPlayer();
 		}
 	}
-	
+
 	/**
 	 * Method to check if there is a winner
+	 * 
 	 * @return true if there is a winning player
 	 */
-	private static boolean isFinalState() {
+	// To be able to access it from the controller
+	public static boolean isFinalState() {
 		for (Player player : players) {
-			if (player.getTerritories().size() + 1 == territories.length) return true;
+			if (player.getTerritories().size() + 1 == territories.length)
+				return true;
 		}
 		return false;
 	}
-	
+
+	// To be able to change the current player from the controller
+	public static void changePlayer() {
+		currentPlayerId = getNextPlayer();
+	}
+
+	// To be able to obtain the current player
+	public static Player getCurrentPlayer() {
+		return players[currentPlayerId];
+	}
+
+	// To be able to obtain the other player
+	public static Player getOtherPlayer() {
+		return players[1 - currentPlayerId];
+	}
+
 	private static int getNextPlayer() {
 		return 1 - currentPlayerId;
 	}
-	
+
 	private static void initializeTerritories(int playerArmy) {
 		ArrayList<Integer> permutation = new ArrayList<Integer>();
 		for (int i = 1; i < territories.length; i++) {
@@ -187,8 +210,13 @@ public class Game {
 		java.util.Collections.shuffle(permutation);
 		for (int i = 0; i < permutation.size(); i++) {
 			int idx = permutation.get(i);
-			if (2 * i > permutation.size())territories[idx].setHolderID(0);
-			else territories[idx].setHolderID(1);
+			if (2 * i > permutation.size()) {
+				territories[idx].setHolderID(0);
+				players[0].getTerritories().add(idx);
+			} else {
+				territories[idx].setHolderID(1);
+				players[1].getTerritories().add(idx);
+			}
 			territories[idx].setTroopsCount(1);
 		}
 		playerArmy -= permutation.size();
@@ -199,7 +227,10 @@ public class Game {
 			territories[idx].setTroopsCount(territories[idx].getTroopsCount() + 1);
 			playerArmy--;
 			i++;
-			if (i == permutation.size()) i = 0;
+			if (i == permutation.size())
+				i = 0;
 		}
+		// Update the territories in the GUI
+		GameConfig.updateTerritories(territories);
 	}
 }

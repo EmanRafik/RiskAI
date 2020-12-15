@@ -15,4 +15,16 @@ public class Passive extends Player {
 
 	}
 
+	@Override
+	public void distributedBonusTroops() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void performAttacks() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -44,4 +44,16 @@ public class PacifistAgent extends Player {
 		}
 		return weakest;
 	}
+
+	@Override
+	public void distributedBonusTroops() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void performAttacks() {
+		// TODO Auto-generated method stub
+		
+	}
 }
