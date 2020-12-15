@@ -1,5 +1,6 @@
 package models.agents;
 
+import controller.GameConfig;
 import models.Game;
 import models.Player;
 import models.Territory;
@@ -12,11 +13,8 @@ public class PacifistAgent extends Player {
 
 	@Override
 	public void play() {
-		int bonusArmy = super.calculateBonusArmay();
-		Territory weakestTerr = Game.getTerritories()[getWeakestTerritory()];
-		weakestTerr.setTroopsCount(weakestTerr.getTroopsCount() + bonusArmy);
-		Territory territoryWithFewestArmy = this.getTerritoryWithFewestArmy();
-		if (territoryWithFewestArmy != null) this.attack(territoryWithFewestArmy);
+		
+		
 	}
 	
 	private int getWeakestTerritory() {
@@ -36,6 +34,7 @@ public class PacifistAgent extends Player {
 		int min = Integer.MAX_VALUE;
 		Territory weakest = null;
 		for (Territory terr : Game.getTerritories()) {
+			if (terr == null) continue;
 			if (terr.getHolderID() == this.getPlayerID()) continue;
 			for (Integer adj : terr.getAdjacentTerrs()) {
 				if (Game.getTerritories()[adj].getHolderID() == this.getPlayerID()) {
@@ -53,15 +52,35 @@ public class PacifistAgent extends Player {
 	}
 	
 	private void attack(Territory terr) {
+		System.out.println(terr.getHolderID());
+		System.out.println(this.getTerritories());
 		for (Integer adj : terr.getAdjacentTerrs()) {
 			if (Game.getTerritories()[adj].getHolderID() == this.getPlayerID() && 
 					Game.getTerritories()[adj].getTroopsCount() > terr.getTroopsCount()) {
 				terr.setTroopsCount(Game.getTerritories()[adj].getTroopsCount() - 1);
-				Game.getPlayers()[terr.getHolderID()].getTerritories().remove(terr.getTerritoryID());
+				Game.getPlayers()[terr.getHolderID()].removeTerritory(terr.getTerritoryID());
 				terr.setHolderID(this.getPlayerID());
 				this.getTerritories().add(terr.getTerritoryID());
 				Game.getTerritories()[adj].setTroopsCount(1);
+				GameConfig.updateTerritories(Game.getTerritories());
+				break;
 			}
 		}
+		System.out.println(terr.getHolderID());
+		System.out.println(this.getTerritories());
+	}
+
+	@Override
+	public void distributedBonusTroops() {
+		int bonusArmy = super.calculateBonusArmay();
+		Territory weakestTerr = Game.getTerritories()[getWeakestTerritory()];
+		weakestTerr.setTroopsCount(weakestTerr.getTroopsCount() + bonusArmy);
+		GameConfig.updateTerritories(Game.getTerritories());
+	}
+
+	@Override
+	public void performAttacks() {
+		Territory territoryWithFewestArmy = this.getTerritoryWithFewestArmy();
+		if (territoryWithFewestArmy != null) this.attack(territoryWithFewestArmy);
 	}
 }
