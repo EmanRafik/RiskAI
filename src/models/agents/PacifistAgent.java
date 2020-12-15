@@ -16,7 +16,7 @@ public class PacifistAgent extends Player {
 		Territory weakestTerr = Game.getTerritories()[getWeakestTerritory()];
 		weakestTerr.setTroopsCount(weakestTerr.getTroopsCount() + bonusArmy);
 		Territory territoryWithFewestArmy = this.getTerritoryWithFewestArmy();
-		this.attack(territoryWithFewestArmy);
+		if (territoryWithFewestArmy != null) this.attack(territoryWithFewestArmy);
 	}
 	
 	private int getWeakestTerritory() {
