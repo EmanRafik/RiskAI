@@ -16,6 +16,7 @@ public class PacifistAgent extends Player {
 		Territory weakestTerr = Game.getTerritories()[getWeakestTerritory()];
 		weakestTerr.setTroopsCount(weakestTerr.getTroopsCount() + bonusArmy);
 		Territory territoryWithFewestArmy = this.getTerritoryWithFewestArmy();
+		this.attack(territoryWithFewestArmy);
 	}
 	
 	private int getWeakestTerritory() {
@@ -36,12 +37,31 @@ public class PacifistAgent extends Player {
 		Territory weakest = null;
 		for (Territory terr : Game.getTerritories()) {
 			if (terr.getHolderID() == this.getPlayerID()) continue;
-			int cnt = terr.getTroopsCount();
-			if (cnt < min) {
-				min = cnt;
-				weakest = terr;
+			for (Integer adj : terr.getAdjacentTerrs()) {
+				if (Game.getTerritories()[adj].getHolderID() == this.getPlayerID()) {
+					int cnt = terr.getTroopsCount();
+					if (cnt < min) {
+						min = cnt;
+						weakest = terr;
+					}
+					break;
+				}
 			}
+			
 		}
 		return weakest;
+	}
+	
+	private void attack(Territory terr) {
+		for (Integer adj : terr.getAdjacentTerrs()) {
+			if (Game.getTerritories()[adj].getHolderID() == this.getPlayerID() && 
+					Game.getTerritories()[adj].getTroopsCount() > terr.getTroopsCount()) {
+				terr.setTroopsCount(Game.getTerritories()[adj].getTroopsCount() - 1);
+				Game.getPlayers()[terr.getHolderID()].getTerritories().remove(terr.getTerritoryID());
+				terr.setHolderID(this.getPlayerID());
+				this.getTerritories().add(terr.getTerritoryID());
+				Game.getTerritories()[adj].setTroopsCount(1);
+			}
+		}
 	}
 }
