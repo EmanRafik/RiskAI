@@ -52,8 +52,6 @@ public class PacifistAgent extends Player {
 	}
 	
 	private void attack(Territory terr) {
-		System.out.println(terr.getHolderID());
-		System.out.println(this.getTerritories());
 		for (Integer adj : terr.getAdjacentTerrs()) {
 			if (Game.getTerritories()[adj].getHolderID() == this.getPlayerID() && 
 					Game.getTerritories()[adj].getTroopsCount() > terr.getTroopsCount()) {
@@ -66,8 +64,6 @@ public class PacifistAgent extends Player {
 				break;
 			}
 		}
-		System.out.println(terr.getHolderID());
-		System.out.println(this.getTerritories());
 	}
 
 	@Override
