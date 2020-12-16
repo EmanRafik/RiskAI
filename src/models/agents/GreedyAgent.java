@@ -25,7 +25,6 @@ public class GreedyAgent extends Player {
 
 	}
 
-	@SuppressWarnings("static-access")
 	@Override
 	public void performAttacks() {
 		// TODO Auto-generated method stub
@@ -35,9 +34,8 @@ public class GreedyAgent extends Player {
 		Player opponent = Game.getPlayers()[1 - super.getPlayerID()];
 		current.setOpponentTerritories(new ArrayList<Integer>(opponent.getTerritories()));
 		current.setPlayerTerritories(new ArrayList<Integer>(getTerritories()));
-		// current.calculateHeuristic();
+
 		addChildren(current);
-		System.out.println(Game.getPlayers()[this.getPlayerID()].getTerritories());
 		if (searchHeap.size() > 0) {
 			State nextState = searchHeap.peek();
 			this.setTerritories(new ArrayList<Integer>(nextState.getPlayerTerritories()));
@@ -45,8 +43,6 @@ public class GreedyAgent extends Player {
 					.setTerritories(new ArrayList<Integer>(nextState.getOpponentTerritories()));
 			Game.setTerritories(cloneTerritories(nextState.getTerritories()));
 			GameConfig.updateTerritories(Game.getTerritories());
-			System.out.println(this.getPlayerID());
-			System.out.println(Game.getPlayers()[this.getPlayerID()].getTerritories());
 		}
 
 	}
