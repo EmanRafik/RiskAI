@@ -13,7 +13,7 @@ import models.Territory;
 public class GreedyAgent extends Player {
 
 	private PriorityQueue<State> searchHeap;
-	private Game game = Game.getInstance();
+	// private Game game = Game.getInstance();
 
 	public GreedyAgent(int id) {
 		super(id);
@@ -22,7 +22,7 @@ public class GreedyAgent extends Player {
 	@Override
 	public void play() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@SuppressWarnings("static-access")
@@ -31,18 +31,24 @@ public class GreedyAgent extends Player {
 		// TODO Auto-generated method stub
 		searchHeap = new PriorityQueue<>();
 		State current = new State();
-		current.setTerritories(game.getTerritories().clone());
-		Player opponent = game.getPlayers()[1 - super.getPlayerID()];
+		current.setTerritories(cloneTerritories(Game.getTerritories()));
+		Player opponent = Game.getPlayers()[1 - super.getPlayerID()];
 		current.setOpponentTerritories(new ArrayList<Integer>(opponent.getTerritories()));
 		current.setPlayerTerritories(new ArrayList<Integer>(getTerritories()));
-		current.calculateHeuristic();
+		// current.calculateHeuristic();
 		addChildren(current);
-		
-		State nextState = searchHeap.peek();
-		super.setTerritories(new ArrayList<Integer>(nextState.getPlayerTerritories()));
-		game.getPlayers()[1 - super.getPlayerID()].setTerritories(new ArrayList<Integer>(nextState.getOpponentTerritories()));
-		game.setTerritories(nextState.getTerritories().clone());
-		GameConfig.updateTerritories(Game.getTerritories());
+		System.out.println(Game.getPlayers()[this.getPlayerID()].getTerritories());
+		if (searchHeap.size() > 0) {
+			State nextState = searchHeap.peek();
+			this.setTerritories(new ArrayList<Integer>(nextState.getPlayerTerritories()));
+			Game.getPlayers()[1 - super.getPlayerID()]
+					.setTerritories(new ArrayList<Integer>(nextState.getOpponentTerritories()));
+			Game.setTerritories(cloneTerritories(nextState.getTerritories()));
+			GameConfig.updateTerritories(Game.getTerritories());
+			System.out.println(this.getPlayerID());
+			System.out.println(Game.getPlayers()[this.getPlayerID()].getTerritories());
+		}
+
 	}
 
 	private void addChildren(State parent) {
@@ -55,9 +61,11 @@ public class GreedyAgent extends Player {
 						State child = new State();
 						List<Integer> childPlayerTerritories = new ArrayList<>(parent.getPlayerTerritories());
 						childPlayerTerritories.add(adj);
+						child.setPlayerTerritories(childPlayerTerritories);
 						List<Integer> childOpponentTerritories = new ArrayList<>(parent.getOpponentTerritories());
-						childOpponentTerritories.remove(adj);
-						Territory[] childTerr = terr.clone();
+						removeTerritory(childOpponentTerritories, adj);
+						child.setOpponentTerritories(childOpponentTerritories);
+						Territory[] childTerr = cloneTerritories(terr);
 						childTerr[adj].setHolderID(super.getPlayerID());
 						childTerr[adj].setTroopsCount(terr[territory].getTroopsCount() - 1);
 						childTerr[territory].setTroopsCount(1);
@@ -66,6 +74,14 @@ public class GreedyAgent extends Player {
 						searchHeap.add(child);
 					}
 				}
+			}
+		}
+	}
+
+	private void removeTerritory(List<Integer> list, int id) {
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i) == id) {
+				list.remove(i);
 			}
 		}
 	}

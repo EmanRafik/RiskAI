@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Territory {
@@ -50,4 +51,9 @@ public class Territory {
 		this.troopsCount = troopsCount;
 	}
 	
+	public Territory clone() {
+		Territory terr = new Territory(this.territoryID, this.holderID, this.troopsCount);
+		terr.setAdjacentTerrs(new ArrayList<Integer>(this.adjacentTerrs));
+		return terr;
+	}
 }
