@@ -24,12 +24,6 @@ public class GreedyAgent extends Player {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	@Override
-	public void distributedBonusTroops() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@SuppressWarnings("static-access")
 	@Override
