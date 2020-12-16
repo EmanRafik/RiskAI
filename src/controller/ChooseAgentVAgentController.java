@@ -50,19 +50,19 @@ public class ChooseAgentVAgentController {
 	private Player getPlayer(String type, int id) {
 		switch (type.toLowerCase()) {
 		case "aggressive agent":
-			return new AgressiveAgent(1);
+			return new AgressiveAgent(id);
 		case "passive agent":
-			return new Passive(1);
+			return new Passive(id);
 		case "pacifist agent":
-			return new PacifistAgent(1);
+			return new PacifistAgent(id);
 		case "greedy agent":
-			return new GreedyAgent(1);
+			return new GreedyAgent(id);
 		case "a* agent":
-			return new AStarAgent(1);
+			return new AStarAgent(id);
 		case "real time a* agent":
-			return new RealtimeAStarAgent(1);
+			return new RealtimeAStarAgent(id);
 		case "minimax agent":
-			return new MiniMaxAgent(1);
+			return new MiniMaxAgent(id);
 		default:
 			return null;
 		}
