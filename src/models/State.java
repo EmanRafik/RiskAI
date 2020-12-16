@@ -67,5 +67,12 @@ public class State implements Comparator<State>{
 		// TODO Auto-generated method stub
 		return (s1.getHeuristic() + s1.getCost()) - (s2.getHeuristic() + s2.getCost());
 	}
+	
+	public boolean isTerminalState() {
+		if (playerTerritories.size() + 1 == territories.length
+				|| opponentTerritories.size() + 1 == territories.length)
+			return true;
+		return false;
+	}
 
 }
