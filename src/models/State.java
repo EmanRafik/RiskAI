@@ -9,7 +9,7 @@ public class State implements Comparator<State>{
 	private List<Integer> playerTerritories;
 	private List<Integer> opponentTerritories;
 	
-	private int cost, heuristic;
+	private int cost = 0, heuristic = 0;
 	
 	
 	public Territory[] getTerritories() {
@@ -65,7 +65,7 @@ public class State implements Comparator<State>{
 	@Override
 	public int compare(State s1, State s2) {
 		// TODO Auto-generated method stub
-		return s2.getHeuristic() - s1.getHeuristic();
+		return (s1.getHeuristic() + s1.getCost()) - (s2.getHeuristic() + s2.getCost());
 	}
 
 }

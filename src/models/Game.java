@@ -3,6 +3,7 @@ package models;
 import java.util.ArrayList;
 import java.util.List;
 
+import controller.GameConfig;
 import models.agents.GreedyAgent;
 import models.agents.HumanAgent;
 
@@ -13,9 +14,7 @@ public class Game {
 	 */
 	private static Game instance;
 	/**
-	 * integer holding the current game map
-	 *  0 -> Egypt
-	 *  1 -> USA
+	 * integer holding the current game map 0 -> Egypt 1 -> USA
 	 */
 	private static int gameMap;
 	/**
@@ -27,13 +26,10 @@ public class Game {
 	 */
 	private static Player[] players;
 	/**
-	 * Integer representing the game mode
-	 * 0 -> Playing mode
-	 * 1 -> Simulation mode
+	 * Integer representing the game mode 0 -> Playing mode 1 -> Simulation mode
 	 */
 	private static int gameMode;
-	
-	
+
 	public static int getCurrentPlayerId() {
 		return currentPlayerId;
 	}
@@ -63,9 +59,10 @@ public class Game {
 	}
 
 	private static int currentPlayerId;
-	
+
 	/**
 	 * Class constructor to initialize the game
+	 * 
 	 * @param gameMap
 	 * @param players
 	 * @param gameMode
@@ -131,12 +128,116 @@ public class Game {
 			territories[26].setAdjacentTerrs(new ArrayList<Integer>(List.of(25)));
 			territories[27] = new Territory(27);
 			territories[27].setAdjacentTerrs(new ArrayList<Integer>(List.of(21, 23, 26)));
+			initializeTerritories(40);
 		}
 		if (gameMap == 1) {
-			// ToDo: Initialize the territories according to United States' map
+			territories = new Territory[51];
+			territories[0] = null;
+			territories[1] = new Territory(1);
+			territories[1].setAdjacentTerrs(new ArrayList<Integer>(List.of(2, 5, 50)));
+			territories[2] = new Territory(2);
+			territories[2].setAdjacentTerrs(new ArrayList<Integer>(List.of(1, 3, 4, 5)));
+			territories[3] = new Territory(3);
+			territories[3].setAdjacentTerrs(new ArrayList<Integer>(List.of(2, 4, 9, 49)));
+			territories[4] = new Territory(4);
+			territories[4].setAdjacentTerrs(new ArrayList<Integer>(List.of(2, 3, 5, 8, 9)));
+			territories[5] = new Territory(5);
+			territories[5].setAdjacentTerrs(new ArrayList<Integer>(List.of(1, 2, 4, 6, 7, 8)));
+			territories[6] = new Territory(6);
+			territories[6].setAdjacentTerrs(new ArrayList<Integer>(List.of(5, 7, 16, 17)));
+			territories[7] = new Territory(7);
+			territories[7].setAdjacentTerrs(new ArrayList<Integer>(List.of(5, 6, 8, 10, 15, 16)));
+			territories[8] = new Territory(8);
+			territories[8].setAdjacentTerrs(new ArrayList<Integer>(List.of(4, 5, 7, 9, 10, 11)));
+			territories[9] = new Territory(9);
+			territories[9].setAdjacentTerrs(new ArrayList<Integer>(List.of(3, 4, 8, 10, 11, 49)));
+			territories[10] = new Territory(10);
+			territories[10].setAdjacentTerrs(new ArrayList<Integer>(List.of(7, 8, 9, 11, 13, 14, 15)));
+			territories[11] = new Territory(11);
+			territories[11].setAdjacentTerrs(new ArrayList<Integer>(List.of(8, 9, 10, 12, 13)));
+			territories[12] = new Territory(12);
+			territories[12].setAdjacentTerrs(new ArrayList<Integer>(List.of(11, 13, 21, 22)));
+			territories[13] = new Territory(13);
+			territories[13].setAdjacentTerrs(new ArrayList<Integer>(List.of(10, 11, 12, 14, 20, 21)));
+			territories[14] = new Territory(14);
+			territories[14].setAdjacentTerrs(new ArrayList<Integer>(List.of(10, 13, 15, 20)));
+			territories[15] = new Territory(15);
+			territories[15].setAdjacentTerrs(new ArrayList<Integer>(List.of(7, 10, 14, 16, 19, 20)));
+			territories[16] = new Territory(16);
+			territories[16].setAdjacentTerrs(new ArrayList<Integer>(List.of(6, 7, 15, 17, 18, 19)));
+			territories[17] = new Territory(17);
+			territories[17].setAdjacentTerrs(new ArrayList<Integer>(List.of(6, 16, 18)));
+			territories[18] = new Territory(18);
+			territories[18].setAdjacentTerrs(new ArrayList<Integer>(List.of(16, 17, 19, 34, 36)));
+			territories[19] = new Territory(19);
+			territories[19].setAdjacentTerrs(new ArrayList<Integer>(List.of(15, 16, 18, 20, 33, 34)));
+			territories[20] = new Territory(20);
+			territories[20].setAdjacentTerrs(new ArrayList<Integer>(List.of(13, 14, 15, 19, 21, 31, 32, 33)));
+			territories[21] = new Territory(21);
+			territories[21].setAdjacentTerrs(new ArrayList<Integer>(List.of(13, 20, 22, 23, 31)));
+			territories[22] = new Territory(22);
+			territories[22].setAdjacentTerrs(new ArrayList<Integer>(List.of(12, 21, 23)));
+			territories[23] = new Territory(23);
+			territories[23].setAdjacentTerrs(new ArrayList<Integer>(List.of(21, 22, 23, 31)));
+			territories[24] = new Territory(24);
+			territories[24].setAdjacentTerrs(new ArrayList<Integer>(List.of(23, 25, 26, 31)));
+			territories[25] = new Territory(25);
+			territories[25].setAdjacentTerrs(new ArrayList<Integer>(List.of(24, 26)));
+			territories[26] = new Territory(26);
+			territories[26].setAdjacentTerrs(new ArrayList<Integer>(List.of(24, 25, 27, 28, 31)));
+			territories[27] = new Territory(27);
+			territories[27].setAdjacentTerrs(new ArrayList<Integer>(List.of(26, 28, 31)));
+			territories[28] = new Territory(28);
+			territories[28].setAdjacentTerrs(new ArrayList<Integer>(List.of(27, 29, 31)));
+			territories[29] = new Territory(29);
+			territories[29].setAdjacentTerrs(new ArrayList<Integer>(List.of(28, 30, 31, 32, 48)));
+			territories[30] = new Territory(30);
+			territories[30].setAdjacentTerrs(new ArrayList<Integer>(List.of(29, 32, 37, 38, 48)));
+			territories[31] = new Territory(31);
+			territories[31].setAdjacentTerrs(new ArrayList<Integer>(List.of(20, 21, 23, 24, 26, 28, 29, 32)));
+			territories[32] = new Territory(32);
+			territories[32].setAdjacentTerrs(new ArrayList<Integer>(List.of(20, 29, 30, 31, 33, 35, 37)));
+			territories[33] = new Territory(33);
+			territories[33].setAdjacentTerrs(new ArrayList<Integer>(List.of(19, 20, 32, 34, 35)));
+			territories[34] = new Territory(34);
+			territories[34].setAdjacentTerrs(new ArrayList<Integer>(List.of(18, 19, 33, 36)));
+			territories[35] = new Territory(35);
+			territories[35].setAdjacentTerrs(new ArrayList<Integer>(List.of(32, 33, 36, 37)));
+			territories[36] = new Territory(36);
+			territories[36].setAdjacentTerrs(new ArrayList<Integer>(List.of(34, 35, 37)));
+			territories[37] = new Territory(37);
+			territories[37].setAdjacentTerrs(new ArrayList<Integer>(List.of(30, 32, 35, 36, 38)));
+			territories[38] = new Territory(38);
+			territories[38].setAdjacentTerrs(new ArrayList<Integer>(List.of(30, 37, 39, 46, 47, 48)));
+			territories[39] = new Territory(39);
+			territories[39].setAdjacentTerrs(new ArrayList<Integer>(List.of(38, 40, 43, 45, 46)));
+			territories[40] = new Territory(40);
+			territories[40].setAdjacentTerrs(new ArrayList<Integer>(List.of(39, 41, 43)));
+			territories[41] = new Territory(41);
+			territories[41].setAdjacentTerrs(new ArrayList<Integer>(List.of(40, 42, 43)));
+			territories[41] = new Territory(41);
+			territories[41].setAdjacentTerrs(new ArrayList<Integer>(List.of(40, 42, 43)));
+			territories[42] = new Territory(42);
+			territories[42].setAdjacentTerrs(new ArrayList<Integer>(List.of(41)));
+			territories[43] = new Territory(43);
+			territories[43].setAdjacentTerrs(new ArrayList<Integer>(List.of(39, 40, 41, 44, 45)));
+			territories[44] = new Territory(44);
+			territories[44].setAdjacentTerrs(new ArrayList<Integer>(List.of(43, 45)));
+			territories[45] = new Territory(45);
+			territories[45].setAdjacentTerrs(new ArrayList<Integer>(List.of(39, 43, 44)));
+			territories[46] = new Territory(46);
+			territories[46].setAdjacentTerrs(new ArrayList<Integer>(List.of(38, 39, 47)));
+			territories[47] = new Territory(47);
+			territories[47].setAdjacentTerrs(new ArrayList<Integer>(List.of(38, 46, 48)));
+			territories[48] = new Territory(48);
+			territories[48].setAdjacentTerrs(new ArrayList<Integer>(List.of(29, 30, 38, 47)));
+			territories[49] = new Territory(49);
+			territories[49].setAdjacentTerrs(new ArrayList<Integer>(List.of(3, 9)));
+			territories[50] = new Territory(50);
+			territories[50].setAdjacentTerrs(new ArrayList<Integer>(List.of(1)));
 		}
 	}
-	
+
 	public static synchronized Game getInstance() {
 		if (instance == null) {
 			players = new Player[2];
@@ -146,38 +247,96 @@ public class Game {
 		}
 		return instance;
 	}
-	
+
 	public static synchronized Game getInstance(int gameMap, Player[] players, int gameMode) {
 		if (instance == null) {
 			instance = new Game(gameMap, players, gameMode);
 		}
 		return instance;
 	}
-	
-	
-	
+
 	/**
-	 * Main Game loop method
+	 * Main Game methods
 	 */
+	// perform the first part of the turn
+	public static void distributeTroops() {
+		players[currentPlayerId].distributedBonusTroops();
+	}
+
+	// perform the second part of the turn
+	public static void performAttacks() {
+		players[currentPlayerId].performAttacks();
+	}
+
 	public static void run() {
 		while (!isFinalState()) {
 			players[currentPlayerId].play();
 			currentPlayerId = getNextPlayer();
 		}
 	}
-	
+
 	/**
 	 * Method to check if there is a winner
+	 * 
 	 * @return true if there is a winning player
 	 */
-	private static boolean isFinalState() {
+	// To be able to access it from the controller
+	public static boolean isFinalState() {
 		for (Player player : players) {
-			if (player.getTerritories().size() + 1 == territories.length) return true;
+			if (player.getTerritories().size() + 1 == territories.length)
+				return true;
 		}
 		return false;
 	}
-	
+
+	// To be able to change the current player from the controller
+	public static void changePlayer() {
+		currentPlayerId = getNextPlayer();
+	}
+
+	// To be able to obtain the current player
+	public static Player getCurrentPlayer() {
+		return players[currentPlayerId];
+	}
+
+	// To be able to obtain the other player
+	public static Player getOtherPlayer() {
+		return players[1 - currentPlayerId];
+	}
+
 	private static int getNextPlayer() {
 		return 1 - currentPlayerId;
+	}
+
+	private static void initializeTerritories(int playerArmy) {
+		ArrayList<Integer> permutation = new ArrayList<Integer>();
+		for (int i = 1; i < territories.length; i++) {
+			permutation.add(i);
+		}
+		java.util.Collections.shuffle(permutation);
+		for (int i = 0; i < permutation.size(); i++) {
+			int idx = permutation.get(i);
+			if (2 * i > permutation.size()) {
+				territories[idx].setHolderID(0);
+				players[0].getTerritories().add(idx);
+			} else {
+				territories[idx].setHolderID(1);
+				players[1].getTerritories().add(idx);
+			}
+			territories[idx].setTroopsCount(1);
+		}
+		playerArmy -= permutation.size();
+		java.util.Collections.shuffle(permutation);
+		int i = 0;
+		while (playerArmy > 0) {
+			int idx = permutation.get(i);
+			territories[idx].setTroopsCount(territories[idx].getTroopsCount() + 1);
+			playerArmy--;
+			i++;
+			if (i == permutation.size())
+				i = 0;
+		}
+		// Update the territories in the GUI
+		GameConfig.updateTerritories(territories);
 	}
 }

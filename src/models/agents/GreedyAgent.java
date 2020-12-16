@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+import controller.GameConfig;
 import models.Game;
 import models.Player;
 import models.State;
@@ -18,12 +19,22 @@ public class GreedyAgent extends Player {
 		super(id);
 	}
 
-	@SuppressWarnings("static-access")
 	@Override
 	public void play() {
 		// TODO Auto-generated method stub
-		int bonusArmies = super.calculateBonusArmay();
-		placeBonusArmies(bonusArmies);
+		
+	}
+	
+	@Override
+	public void distributedBonusTroops() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@SuppressWarnings("static-access")
+	@Override
+	public void performAttacks() {
+		// TODO Auto-generated method stub
 		searchHeap = new PriorityQueue<>();
 		State current = new State();
 		current.setTerritories(game.getTerritories().clone());
@@ -34,15 +45,12 @@ public class GreedyAgent extends Player {
 		addChildren(current);
 		
 		State nextState = searchHeap.peek();
-		super.setTerritories(nextState.getPlayerTerritories());
-		game.getPlayers()[1 - super.getPlayerID()].setTerritories(nextState.getOpponentTerritories());
-		game.setTerritories(nextState.getTerritories());
+		super.setTerritories(new ArrayList<Integer>(nextState.getPlayerTerritories()));
+		game.getPlayers()[1 - super.getPlayerID()].setTerritories(new ArrayList<Integer>(nextState.getOpponentTerritories()));
+		game.setTerritories(nextState.getTerritories().clone());
+		GameConfig.updateTerritories(Game.getTerritories());
 	}
 
-	private void placeBonusArmies(int bonusArmies) {
-
-	}
-	
 	private void addChildren(State parent) {
 		Territory[] terr = parent.getTerritories();
 		for (Integer territory : parent.getPlayerTerritories()) {
