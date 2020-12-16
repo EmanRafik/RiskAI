@@ -68,19 +68,19 @@ public abstract class Player {
 		ArrayList<Double> borderSecurityRatio = new ArrayList<Double>();
 		ArrayList<Pair> arr = new ArrayList<Pair>();
 		for (Integer curTerr : this.getTerritories()) {
-			borderSecurityRatio.add(0.0);
-			Double curBSR = borderSecurityRatio.get(borderSecurityRatio.size() - 1);
+			double curBSR = 0.0;
 			for (Integer oppTerr : Game.getTerritories()[curTerr].getAdjacentTerrs()) {
 				if (Game.getTerritories()[oppTerr].getHolderID() == this.getPlayerID()) continue;
 				curBSR += Game.getTerritories()[oppTerr].getTroopsCount();
 			}
 			curBSR = curBSR / (1.0 * Game.getTerritories()[curTerr].getTroopsCount());
+			borderSecurityRatio.add(curBSR);
 			arr.add(new Pair(curBSR, curTerr));
 		}
 		Collections.sort(arr, new Comparator<Pair>() { 
             @Override
             public int compare(Pair p1, Pair p2) { 
-                return (int) (p1.x - p2.x);
+                return (int) (p2.x - p1.x);
             }
 		});
 		List<Pair> weakestTerr = arr.subList(0, Math.min(3, arr.size()));
