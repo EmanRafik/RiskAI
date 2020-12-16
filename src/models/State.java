@@ -3,7 +3,7 @@ package models;
 import java.util.Comparator;
 import java.util.List;
 
-public class State implements Comparator<State>{
+public class State implements Comparable<State>{
 
 	private Territory[] territories;
 	private List<Integer> playerTerritories;
@@ -47,8 +47,8 @@ public class State implements Comparator<State>{
 	}
 
 
-	public void calculateCost() {
-		
+	public void calculateCost(int parentCost) {
+		this.cost = parentCost + 1;
 	}
 
 
@@ -56,16 +56,20 @@ public class State implements Comparator<State>{
 		return heuristic;
 	}
 
-
 	public void calculateHeuristic() {
-		
+		for (Integer terr: opponentTerritories) {
+			for(Integer adj : territories[terr].getAdjacentTerrs()) {
+				if (territories[adj].getHolderID() == Game.getCurrentPlayerId()) {
+					heuristic += territories[terr].getTroopsCount();
+				}
+			}
+		}
 	}
 
-
 	@Override
-	public int compare(State s1, State s2) {
+	public int compareTo(State s) {
 		// TODO Auto-generated method stub
-		return (s1.getHeuristic() + s1.getCost()) - (s2.getHeuristic() + s2.getCost());
+		return (this.getHeuristic() + this.getCost()) - (s.getHeuristic() + s.getCost());
 	}
 
 }

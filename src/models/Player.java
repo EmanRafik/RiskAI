@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import controller.GameConfig;
+
 
 public abstract class Player {
 	/**
@@ -88,6 +90,7 @@ public abstract class Player {
 			bonusArmy--;
 			idx = (idx + 1) % weakestTerr.size();
 		}
+		GameConfig.updateTerritories(Game.getTerritories());
 	}
 	
 	// Function to remove a territory from this player's possession
@@ -99,6 +102,14 @@ public abstract class Player {
 		}
 	}
 
+	public Territory[] cloneTerritories(Territory[] territories) {
+		Territory[] terr = new Territory[territories.length];
+		for (int i = 1; i < territories.length; i++) {
+			terr[i] = territories[i].clone();
+		}
+		return terr;
+	}
+	
 	class Pair { 
 	    double x; 
 	    int y; 
