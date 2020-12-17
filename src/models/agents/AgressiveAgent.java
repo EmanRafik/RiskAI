@@ -72,6 +72,7 @@ public class AgressiveAgent extends Player {
 						oppTerr.setHolderID(this.getPlayerID());
 						this.getTerritories().add(oppTerr.getTerritoryID());
 						GameConfig.updateTerritories(Game.getTerritories());
+						break;
 					}
 				}
 			}
