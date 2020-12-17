@@ -61,7 +61,7 @@ public class GreedyAgent extends Player {
 						childPlayerTerritories.add(adj);
 						child.setPlayerTerritories(childPlayerTerritories);
 						List<Integer> childOpponentTerritories = new ArrayList<>(parent.getOpponentTerritories());
-						removeTerritory(childOpponentTerritories, adj);
+						super.removeTerritory(childOpponentTerritories, adj);
 						child.setOpponentTerritories(childOpponentTerritories);
 						Territory[] childTerr = cloneTerritories(terr);
 						childTerr[adj].setHolderID(super.getPlayerID());
@@ -72,14 +72,6 @@ public class GreedyAgent extends Player {
 						searchHeap.add(child);
 					}
 				}
-			}
-		}
-	}
-
-	private void removeTerritory(List<Integer> list, int id) {
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i) == id) {
-				list.remove(i);
 			}
 		}
 	}

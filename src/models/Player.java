@@ -84,6 +84,7 @@ public abstract class Player {
             }
 		});
 		List<Pair> weakestTerr = arr.subList(0, Math.min(3, arr.size()));
+		if (weakestTerr.size() == 0) return;
 		int idx = 0;
 		while (bonusArmy > 0) {
 			Game.getTerritories()[weakestTerr.get(idx).y].setTroopsCount(Game.getTerritories()[weakestTerr.get(idx).y].getTroopsCount() + 1);
@@ -98,6 +99,14 @@ public abstract class Player {
 		for (int i = 0; i < territories.size(); i++) {
 			if (territories.get(i) == id) {
 				territories.remove(i);
+			}
+		}
+	}
+	
+	public void removeTerritory(List<Integer> terr, int id) {
+		for (int i = 0; i < terr.size(); i++) {
+			if (terr.get(i) == id) {
+				terr.remove(i);
 			}
 		}
 	}

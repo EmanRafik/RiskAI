@@ -1,5 +1,7 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -7,6 +9,7 @@ public class State implements Comparable<State>{
 
 	private Territory[] territories;
 	private List<Integer> playerTerritories;
+	private Territory[] initialTerritories;
 	private List<Integer> opponentTerritories;
 	
 	private int cost = 0, heuristic = 0;
@@ -68,7 +71,6 @@ public class State implements Comparable<State>{
 
 	@Override
 	public int compareTo(State s) {
-		// TODO Auto-generated method stub
 		return (this.getHeuristic() + this.getCost()) - (s.getHeuristic() + s.getCost());
 	}
 	
@@ -78,5 +80,55 @@ public class State implements Comparable<State>{
 			return true;
 		return false;
 	}
+	
+	public void distributeBonusTroops(int bonusArmy) {
+		initialTerritories = Game.getCurrentPlayer().cloneTerritories(territories);
+		ArrayList<Double> borderSecurityRatio = new ArrayList<Double>();
+		ArrayList<Pair> arr = new ArrayList<Pair>();
+		for (Integer curTerr : playerTerritories) {
+			double curBSR = 0.0;
+			for (Integer oppTerr : territories[curTerr].getAdjacentTerrs()) {
+				if (playerTerritories.contains(oppTerr)) continue;
+				curBSR += territories[oppTerr].getTroopsCount();
+			}
+			curBSR = curBSR / (1.0 * territories[curTerr].getTroopsCount());
+			borderSecurityRatio.add(curBSR);
+			arr.add(new Pair(curBSR, curTerr));
+		}
+		Collections.sort(arr, new Comparator<Pair>() { 
+            @Override
+            public int compare(Pair p1, Pair p2) { 
+                return (int) (p2.x - p1.x);
+            }
+		});
+		List<Pair> weakestTerr = arr.subList(0, Math.min(3, arr.size()));
+		if (weakestTerr.size() == 0) return;
+		int idx = 0;
+		while (bonusArmy > 0) {
+			territories[weakestTerr.get(idx).y].setTroopsCount(territories[weakestTerr.get(idx).y].getTroopsCount() + 1);
+			bonusArmy--;
+			idx = (idx + 1) % weakestTerr.size();
+		}
+	}
+	
+	public void undoDistribute() {
+		this.territories = initialTerritories;
+	}
+	
+	public void swapPlayerTerritories() {
+		List<Integer> temp = playerTerritories;
+		playerTerritories = opponentTerritories;
+		opponentTerritories = temp;
+	}
+	
+	class Pair { 
+	    double x; 
+	    int y; 
+	
+	    public Pair(double x, int y) { 
+	        this.x = x; 
+	        this.y = y; 
+	    } 
+	} 
 
 }
