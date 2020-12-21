@@ -63,6 +63,14 @@ public class ChangeScenesController {
 		changeSceneKeepConfig(loader, event, true);
 	}
 
+	// go to USA's map
+	// In this case we need to set the game configuration to have the corresponding
+	// GUI components to be dealt with interactively
+	public void goToUSA(ActionEvent event) throws IOException {
+		FXMLLoader loader = new FXMLLoader(Main.class.getResource("USAMap.fxml"));
+		changeSceneKeepConfig(loader, event, true);
+	}
+
 	private Stage getStage(ActionEvent event) {
 		return (Stage) ((Node) event.getSource()).getScene().getWindow();
 	}
