@@ -64,9 +64,10 @@ public class AgressiveAgent extends Player {
 				for(int adjTerrId : oppTerr.getAdjacentTerrs()) {
 					Territory terr = Game.getTerritories()[adjTerrId];
 					if(terr.getHolderID() != this.getPlayerID()) continue;
-					if(terr.getTroopsCount() > oppTerr.getTroopsCount()) {
+					if(terr.getTroopsCount() > oppTerr.getTroopsCount()+1) {
 						attacked = true;
-						oppTerr.setTroopsCount(terr.getTroopsCount()-1);
+						int oppTroops = oppTerr.getTroopsCount();
+						oppTerr.setTroopsCount(terr.getTroopsCount() - oppTroops -1);
 						terr.setTroopsCount(1);
 						Game.getPlayers()[oppTerr.getHolderID()].removeTerritory(oppTerr.getTerritoryID());
 						oppTerr.setHolderID(this.getPlayerID());

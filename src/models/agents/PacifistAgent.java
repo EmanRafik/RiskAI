@@ -54,8 +54,9 @@ public class PacifistAgent extends Player {
 	private void attack(Territory terr) {
 		for (Integer adj : terr.getAdjacentTerrs()) {
 			if (Game.getTerritories()[adj].getHolderID() == this.getPlayerID() && 
-					Game.getTerritories()[adj].getTroopsCount() > terr.getTroopsCount()) {
-				terr.setTroopsCount(Game.getTerritories()[adj].getTroopsCount() - 1);
+					Game.getTerritories()[adj].getTroopsCount() > terr.getTroopsCount()+1) {
+				int oppTroops = terr.getTroopsCount();
+				terr.setTroopsCount(Game.getTerritories()[adj].getTroopsCount() - oppTroops - 1);
 				Game.getPlayers()[terr.getHolderID()].removeTerritory(terr.getTerritoryID());
 				terr.setHolderID(this.getPlayerID());
 				this.getTerritories().add(terr.getTerritoryID());
