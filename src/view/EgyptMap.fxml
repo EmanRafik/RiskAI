@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -17,665 +18,490 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0"
-	prefWidth="1366.0" xmlns="http://javafx.com/javafx/8"
-	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="controller.MapController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MapController">
 	<children>
 		<ImageView fitHeight="768.0" fitWidth="1366.0">
 			<image>
 				<Image url="@assets/egypt/EgyptMap.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap1" fitHeight="294.0"
-			fitWidth="665.0" layoutX="22.0" layoutY="41.0" visible="false">
+		<ImageView fx:id="redMap1" fitHeight="294.0" fitWidth="665.0" layoutX="22.0" layoutY="41.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap1.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap2" layoutX="618.0" layoutY="77.0"
-			visible="false">
+		<ImageView fx:id="redMap2" layoutX="618.0" layoutY="77.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap2.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap3" layoutX="626.0" layoutY="58.0"
-			visible="false">
+		<ImageView fx:id="redMap3" layoutX="626.0" layoutY="58.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap3.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap4" layoutX="724.0" layoutY="45.0"
-			visible="false">
+		<ImageView fx:id="redMap4" layoutX="724.0" layoutY="45.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap4.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap5" layoutX="819.0" layoutY="52.0"
-			visible="false">
+		<ImageView fx:id="redMap5" layoutX="819.0" layoutY="52.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap5.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap6" layoutX="851.0" layoutY="44.0"
-			visible="false">
+		<ImageView fx:id="redMap6" layoutX="851.0" layoutY="44.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap6.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap7" layoutX="951.0" layoutY="68.0"
-			visible="false">
+		<ImageView fx:id="redMap7" layoutX="951.0" layoutY="68.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap7.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap8" fitHeight="127.0"
-			fitWidth="263.0" layoutX="986.0" layoutY="68.0" visible="false">
+		<ImageView fx:id="redMap8" fitHeight="127.0" fitWidth="263.0" layoutX="986.0" layoutY="68.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap8.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap9" layoutX="763.0" layoutY="80.0"
-			visible="false">
+		<ImageView fx:id="redMap9" layoutX="763.0" layoutY="80.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap9.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap10" layoutX="769.0" layoutY="113.0"
-			visible="false">
+		<ImageView fx:id="redMap10" layoutX="769.0" layoutY="113.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap10.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap11" layoutX="800.0" layoutY="123.0"
-			visible="false">
+		<ImageView fx:id="redMap11" layoutX="800.0" layoutY="123.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap11.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap12" layoutX="828.0" layoutY="81.0"
-			visible="false">
+		<ImageView fx:id="redMap12" layoutX="828.0" layoutY="81.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap12.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap13" layoutX="891.0" layoutY="83.0"
-			visible="false">
+		<ImageView fx:id="redMap13" layoutX="891.0" layoutY="83.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap13.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap14" fitHeight="197.0"
-			fitWidth="470.0" layoutX="348.0" layoutY="138.0" visible="false">
+		<ImageView fx:id="redMap14" fitHeight="197.0" fitWidth="470.0" layoutX="348.0" layoutY="138.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap14.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap15" layoutX="659.0" layoutY="184.0"
-			visible="false">
+		<ImageView fx:id="redMap15" layoutX="659.0" layoutY="184.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap15.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap16" layoutX="820.0" layoutY="147.0"
-			visible="false">
+		<ImageView fx:id="redMap16" layoutX="820.0" layoutY="147.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap16.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap17" layoutX="899.0" layoutY="145.0"
-			visible="false">
+		<ImageView fx:id="redMap17" layoutX="899.0" layoutY="145.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap17.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap18" fitHeight="154.0"
-			fitWidth="248.0" layoutX="996.0" layoutY="170.0" visible="false">
+		<ImageView fx:id="redMap18" fitHeight="154.0" fitWidth="248.0" layoutX="996.0" layoutY="170.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap18.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap19" layoutX="641.0" layoutY="203.0"
-			visible="false">
+		<ImageView fx:id="redMap19" layoutX="641.0" layoutY="203.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap19.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap20" fitHeight="82.0"
-			fitWidth="271.0" layoutX="509.0" layoutY="257.0" visible="false">
+		<ImageView fx:id="redMap20" fitHeight="82.0" fitWidth="271.0" layoutX="509.0" layoutY="257.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap20.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap21" fitHeight="422.0"
-			fitWidth="954.0" layoutX="60.0" layoutY="346.0" visible="false">
+		<ImageView fx:id="redMap21" fitHeight="422.0" fitWidth="954.0" layoutX="60.0" layoutY="346.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap21.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap22" layoutX="753.0" layoutY="347.0"
-			visible="false">
+		<ImageView fx:id="redMap22" layoutX="753.0" layoutY="347.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap22.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap23" fitHeight="547.0"
-			fitWidth="564.0" layoutX="772.0" layoutY="221.0" visible="false">
+		<ImageView fx:id="redMap23" fitHeight="547.0" fitWidth="564.0" layoutX="772.0" layoutY="221.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap23.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap24" layoutX="835.0" layoutY="402.0"
-			visible="false">
+		<ImageView fx:id="redMap24" layoutX="835.0" layoutY="402.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap24.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap25" layoutX="911.0" layoutY="451.0"
-			visible="false">
+		<ImageView fx:id="redMap25" layoutX="911.0" layoutY="451.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap25.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap26" layoutX="966.0" layoutY="485.0"
-			visible="false">
+		<ImageView fx:id="redMap26" layoutX="966.0" layoutY="485.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap26.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="redMap27" fitHeight="240.0"
-			fitWidth="227.0" layoutX="821.0" layoutY="528.0" visible="false">
+		<ImageView fx:id="redMap27" fitHeight="240.0" fitWidth="227.0" layoutX="821.0" layoutY="528.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/red_maps/redMap27.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap1" fitHeight="294.0"
-			fitWidth="665.0" layoutX="22.0" layoutY="41.0" visible="false">
+		<ImageView fx:id="blueMap1" fitHeight="294.0" fitWidth="665.0" layoutX="22.0" layoutY="41.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap1.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap2" layoutX="618.0" layoutY="77.0"
-			visible="false">
+		<ImageView fx:id="blueMap2" layoutX="618.0" layoutY="77.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap2.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap3" layoutX="626.0" layoutY="58.0"
-			visible="false">
+		<ImageView fx:id="blueMap3" layoutX="626.0" layoutY="58.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap3.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap4" layoutX="724.0" layoutY="45.0"
-			visible="false">
+		<ImageView fx:id="blueMap4" layoutX="724.0" layoutY="45.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap4.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap5" layoutX="819.0" layoutY="52.0"
-			visible="false">
+		<ImageView fx:id="blueMap5" layoutX="819.0" layoutY="52.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap5.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap6" layoutX="851.0" layoutY="44.0"
-			visible="false">
+		<ImageView fx:id="blueMap6" layoutX="851.0" layoutY="44.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap6.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap7" layoutX="951.0" layoutY="68.0"
-			visible="false">
+		<ImageView fx:id="blueMap7" layoutX="951.0" layoutY="68.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap7.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap8" fitHeight="127.0"
-			fitWidth="263.0" layoutX="986.0" layoutY="68.0" visible="false">
+		<ImageView fx:id="blueMap8" fitHeight="127.0" fitWidth="263.0" layoutX="986.0" layoutY="68.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap8.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap9" layoutX="763.0" layoutY="80.0"
-			visible="false">
+		<ImageView fx:id="blueMap9" layoutX="763.0" layoutY="80.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap9.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap10" layoutX="769.0" layoutY="113.0"
-			visible="false">
+		<ImageView fx:id="blueMap10" layoutX="769.0" layoutY="113.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap10.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap11" layoutX="800.0" layoutY="123.0"
-			visible="false">
+		<ImageView fx:id="blueMap11" layoutX="800.0" layoutY="123.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap11.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap12" layoutX="828.0" layoutY="81.0"
-			visible="false">
+		<ImageView fx:id="blueMap12" layoutX="828.0" layoutY="81.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap12.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap13" layoutX="891.0" layoutY="83.0"
-			visible="false">
+		<ImageView fx:id="blueMap13" layoutX="891.0" layoutY="83.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap13.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap14" fitHeight="197.0"
-			fitWidth="470.0" layoutX="348.0" layoutY="138.0" visible="false">
+		<ImageView fx:id="blueMap14" fitHeight="197.0" fitWidth="470.0" layoutX="348.0" layoutY="138.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap14.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap15" layoutX="659.0" layoutY="184.0"
-			visible="false">
+		<ImageView fx:id="blueMap15" layoutX="659.0" layoutY="184.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap15.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap16" layoutX="820.0" layoutY="147.0"
-			visible="false">
+		<ImageView fx:id="blueMap16" layoutX="820.0" layoutY="147.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap16.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap17" layoutX="899.0" layoutY="145.0"
-			visible="false">
+		<ImageView fx:id="blueMap17" layoutX="899.0" layoutY="145.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap17.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap18" fitHeight="154.0"
-			fitWidth="248.0" layoutX="996.0" layoutY="170.0" visible="false">
+		<ImageView fx:id="blueMap18" fitHeight="154.0" fitWidth="248.0" layoutX="996.0" layoutY="170.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap18.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap19" layoutX="641.0" layoutY="203.0"
-			visible="false">
+		<ImageView fx:id="blueMap19" layoutX="641.0" layoutY="203.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap19.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap20" fitHeight="82.0"
-			fitWidth="271.0" layoutX="509.0" layoutY="257.0" visible="false">
+		<ImageView fx:id="blueMap20" fitHeight="82.0" fitWidth="271.0" layoutX="509.0" layoutY="257.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap20.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap21" fitHeight="422.0"
-			fitWidth="954.0" layoutX="60.0" layoutY="346.0" visible="false">
+		<ImageView fx:id="blueMap21" fitHeight="422.0" fitWidth="954.0" layoutX="60.0" layoutY="346.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap21.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap22" layoutX="753.0" layoutY="347.0"
-			visible="false">
+		<ImageView fx:id="blueMap22" layoutX="753.0" layoutY="347.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap22.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap23" fitHeight="547.0"
-			fitWidth="564.0" layoutX="772.0" layoutY="221.0" visible="false">
+		<ImageView fx:id="blueMap23" fitHeight="547.0" fitWidth="564.0" layoutX="772.0" layoutY="221.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap23.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap24" layoutX="835.0" layoutY="402.0"
-			visible="false">
+		<ImageView fx:id="blueMap24" layoutX="835.0" layoutY="402.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap24.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap25" layoutX="911.0" layoutY="451.0"
-			visible="false">
+		<ImageView fx:id="blueMap25" layoutX="911.0" layoutY="451.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap25.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap26" layoutX="966.0" layoutY="485.0"
-			visible="false">
+		<ImageView fx:id="blueMap26" layoutX="966.0" layoutY="485.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap26.png" />
 			</image>
 		</ImageView>
-		<ImageView fx:id="blueMap27" fitHeight="240.0"
-			fitWidth="227.0" layoutX="821.0" layoutY="528.0" visible="false">
+		<ImageView fx:id="blueMap27" fitHeight="240.0" fitWidth="227.0" layoutX="821.0" layoutY="528.0" visible="false">
 			<image>
 				<Image url="@assets/egypt/blue_maps/blueMap27.png" />
 			</image>
 		</ImageView>
-		<Label fx:id="armyNumberLabel14" layoutX="554.0" layoutY="226.0"
-			prefHeight="57.0" prefWidth="101.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel14" layoutX="554.0" layoutY="226.0" prefHeight="57.0" prefWidth="101.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="34.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel1" layoutX="228.0" layoutY="160.0"
-			prefHeight="57.0" prefWidth="67.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel1" layoutX="228.0" layoutY="160.0" prefHeight="57.0" prefWidth="67.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="34.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel20" layoutX="645.0" layoutY="270.0"
-			prefHeight="57.0" prefWidth="101.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel20" layoutX="645.0" layoutY="270.0" prefHeight="57.0" prefWidth="101.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="34.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel19" layoutX="754.0" layoutY="225.0"
-			prefHeight="23.0" prefWidth="37.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel19" layoutX="754.0" layoutY="225.0" prefHeight="23.0" prefWidth="37.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="16.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel15" layoutX="718.0" layoutY="185.0"
-			prefHeight="30.0" prefWidth="53.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel15" layoutX="718.0" layoutY="185.0" prefHeight="30.0" prefWidth="53.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="25.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel4" layoutX="753.0" layoutY="49.0"
-			prefHeight="28.0" prefWidth="39.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel4" layoutX="753.0" layoutY="49.0" prefHeight="28.0" prefWidth="39.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="19.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel3" layoutX="683.0" layoutY="89.0"
-			prefHeight="57.0" prefWidth="101.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel3" layoutX="683.0" layoutY="89.0" prefHeight="57.0" prefWidth="101.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="29.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel2" layoutX="621.0" layoutY="82.0"
-			prefHeight="37.0" prefWidth="67.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel2" layoutX="621.0" layoutY="82.0" prefHeight="37.0" prefWidth="67.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="16.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel5" layoutX="824.0" layoutY="65.0"
-			prefHeight="30.0" prefWidth="39.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel5" layoutX="824.0" layoutY="65.0" prefHeight="30.0" prefWidth="39.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="19.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel6" layoutX="877.0" layoutY="21.0"
-			prefHeight="20.0" prefWidth="28.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel6" layoutX="877.0" layoutY="21.0" prefHeight="20.0" prefWidth="28.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="13.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel10" layoutX="771.0" layoutY="110.0"
-			prefHeight="26.0" prefWidth="33.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel10" layoutX="771.0" layoutY="110.0" prefHeight="26.0" prefWidth="33.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="16.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel11" layoutX="800.0" layoutY="127.0"
-			prefHeight="15.0" prefWidth="33.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel11" layoutX="800.0" layoutY="127.0" prefHeight="15.0" prefWidth="33.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="16.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel9" layoutX="786.0" layoutY="81.0"
-			prefHeight="26.0" prefWidth="25.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel9" layoutX="786.0" layoutY="81.0" prefHeight="26.0" prefWidth="25.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="11.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel17" layoutX="903.0" layoutY="179.0"
-			prefHeight="26.0" prefWidth="45.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel17" layoutX="903.0" layoutY="179.0" prefHeight="26.0" prefWidth="45.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="23.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel13" layoutX="929.0" layoutY="102.0"
-			prefHeight="31.0" prefWidth="43.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel13" layoutX="929.0" layoutY="102.0" prefHeight="31.0" prefWidth="43.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="21.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel16" layoutX="830.0" layoutY="159.0"
-			prefHeight="43.0" prefWidth="53.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel16" layoutX="830.0" layoutY="159.0" prefHeight="43.0" prefWidth="53.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="28.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel12" layoutX="844.0" layoutY="102.0"
-			prefHeight="35.0" prefWidth="48.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel12" layoutX="844.0" layoutY="102.0" prefHeight="35.0" prefWidth="48.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="18.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel18" layoutX="1094.0"
-			layoutY="208.0" prefHeight="57.0" prefWidth="101.0" text="0"
-			textFill="#460d6b">
+		<Label fx:id="armyNumberLabel18" layoutX="1094.0" layoutY="208.0" prefHeight="57.0" prefWidth="101.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="34.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel8" layoutX="1069.0" layoutY="91.0"
-			prefHeight="57.0" prefWidth="101.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel8" layoutX="1069.0" layoutY="91.0" prefHeight="57.0" prefWidth="101.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="34.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel23" layoutX="1067.0"
-			layoutY="448.0" prefHeight="57.0" prefWidth="101.0" text="0"
-			textFill="#460d6b">
+		<Label fx:id="armyNumberLabel23" layoutX="1067.0" layoutY="448.0" prefHeight="57.0" prefWidth="101.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="34.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel7" layoutX="962.0" layoutY="46.0"
-			prefHeight="20.0" prefWidth="29.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel7" layoutX="962.0" layoutY="46.0" prefHeight="20.0" prefWidth="29.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="14.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel26" layoutX="956.0" layoutY="490.0"
-			prefHeight="28.0" prefWidth="33.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel26" layoutX="956.0" layoutY="490.0" prefHeight="28.0" prefWidth="33.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="17.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel25" layoutX="947.0" layoutY="439.0"
-			prefHeight="30.0" prefWidth="33.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel25" layoutX="947.0" layoutY="439.0" prefHeight="30.0" prefWidth="33.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="16.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel24" layoutX="860.0" layoutY="402.0"
-			prefHeight="43.0" prefWidth="29.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel24" layoutX="860.0" layoutY="402.0" prefHeight="43.0" prefWidth="29.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="15.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel22" layoutX="787.0" layoutY="358.0"
-			prefHeight="26.0" prefWidth="33.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel22" layoutX="787.0" layoutY="358.0" prefHeight="26.0" prefWidth="33.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="15.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel21" layoutX="299.0" layoutY="529.0"
-			prefHeight="57.0" prefWidth="67.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel21" layoutX="299.0" layoutY="529.0" prefHeight="57.0" prefWidth="67.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="34.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberLabel27" layoutX="995.0" layoutY="630.0"
-			prefHeight="33.0" prefWidth="48.0" text="0" textFill="#460d6b">
+		<Label fx:id="armyNumberLabel27" layoutX="995.0" layoutY="630.0" prefHeight="33.0" prefWidth="48.0" text="0" textFill="#f8f7f8">
 			<font>
 				<Font name="Comic Sans MS Bold" size="25.0" />
 			</font>
 		</Label>
-		<Polygon fx:id="polyMap1" fill="DODGERBLUE" layoutX="125.0"
-			layoutY="326.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-105.72727966308594, -181.92727661132812, -90.89091491699219, -165.345458984375, -84.78181457519531, -132.0, -68.20002746582031, -118.21817016601562, -68.20001220703125, 12.690887451171875, 209.3272705078125, 12.690887451171875, 268.6727294921875, -63.236358642578125, 381.2545166015625, -70.21820068359375, 486.0, -132.0, 570.6363525390625, -155.74545288085938, 486.0, -181.92727661132812, 486.0, -225.56362915039062, 443.2181396484375, -219.45455932617188, 357.6908874511719, -240.39999389648438, 283.5090637207031, -240.39999389648438, 53.98179626464844, -279.6727294921875, -68.20002746582031, -279.6727294921875, -84.78181457519531, -257.85455322265625, -61.21818542480469, -225.56362915039062"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap2" fill="DODGERBLUE" layoutX="628.0"
-			layoutY="116.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-7.54547119140625, 8.872718811035156, 33.47265625, -10.327278137207031, 13.39996337890625, -23.418190002441406, 22.12725830078125, -38.254554748535156, 40.45452880859375, -50.47272491455078, -7.54547119140625, -29.52727508544922"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap3" fill="DODGERBLUE" layoutX="683.0"
-			layoutY="133.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="82.32720947265625, -3.763641357421875, 66.6181640625, -24.70909881591797, 76.21820068359375, -36.927284240722656, 66.6181640625, -49.14545440673828, 45.6727294921875, -60.49091339111328, 26.47271728515625, -73.58182525634766, -3.20001220703125, -60.49091339111328, -31.12725830078125, -49.14545440673828, -12.800048828125, -24.70909881591797, -60.800048828125, 4.090911865234375, 19.4908447265625, 29.399993896484375"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap4" fill="DODGERBLUE" layoutX="761.0"
-			layoutY="89.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-0.03643798828125, -6.018180847167969, 33.127197265625, -14.745460510253906, 58.43634033203125, -20.85454559326172, 58.43634033203125, -41.80000305175781, 42.72723388671875, -48.781822204589844, 42.72723388671875, -41.80000305175781, 7.81817626953125, -33.94546127319336, -32.3272705078125, -33.94546127319336, -42.800048828125, -33.945457458496094"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap5" fill="DODGERBLUE" layoutX="844.0"
-			layoutY="106.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-6.10906982421875, -54.436363220214844, -17.45452880859375, -54.436363220214844, -17.45452880859375, -37.85454559326172, -27.92724609375, -25.63636016845703, -17.45452880859375, -25.63636016845703, -27.92724609375, -9.054542541503906, -17.45452880859375, 7.527259826660156, -17.45452880859375, -9.054542541503906, 8.727294921875, -9.054542541503906, 52.36358642578125, -31.745460510253906, 37.52728271484375, -37.85454559326172, 19.20001220703125, -25.63636016845703, 1.74542236328125, -44.83637237548828"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap6" fill="DODGERBLUE" layoutX="869.0"
-			layoutY="63.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="15.14544677734375, -2.7090988159179688, 23.0, -8.818187713623047, 9.036376953125, -24.527278900146484, -0.56365966796875, -16.6727294921875, -17.14544677734375, -8.818183898925781, -0.56365966796875, 6.890907287597656"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap7" fill="DODGERBLUE" layoutX="972.0"
-			layoutY="52.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-23.2728271484375, 21.381813049316406, -12.79998779296875, 30.98181915283203, 5.52728271484375, 30.98181915283203, -12.79998779296875, 10.909080505371094"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap8" fill="DODGERBLUE" layoutX="1146.0"
-			layoutY="164.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="34.0, 21.090911865234375, 109.054443359375, 31.563629150390625, 34.0, -97.5999984741211, -26.21826171875, -83.6363754272461, -66.3636474609375, -91.49091339111328, -92.5455322265625, -77.52727508544922, -105.6363525390625, -83.6363754272461, -125.7091064453125, -83.6363754272461, -161.490966796875, -77.52727508544922, -153.63641357421875, -43.49091339111328, -135.30914306640625, -29.527267456054688, -135.30914306640625, -1.600006103515625, -17.490966796875, 5.3818206787109375"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap9" fill="DODGERBLUE" layoutX="779.0"
-			layoutY="140.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="39.5635986328125, -29.090919494628906, 29.09088134765625, -42.18181610107422, 39.5635986328125, -52.65454864501953, 22.98175048828125, -58.763633728027344, -13.67279052734375, -52.65454864501953, -13.67279052734375, -36.072731018066406"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap10" fill="DODGERBLUE" layoutX="765.0"
-			layoutY="171.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="18.78173828125, -28.6727294921875, 44.963623046875, -53.98181915283203, 18.78173828125, -60.090919494628906, 0.3271484375, -60.090919494628906, 8.30908203125, -41.763641357421875"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap11" fill="DODGERBLUE" layoutX="833.0"
-			layoutY="201.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-34.3818359375, -66.0545654296875, -13.43634033203125, -47.727294921875, 13.6181640625, -54.30909729003906, -3.83636474609375, -66.0545654296875, -13.43634033203125, -83.10909271240234, -23.036376953125, -74.38182830810547"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap12" fill="DODGERBLUE" layoutX="890.0"
-			layoutY="180.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-34.654541015625, -38.54545593261719, 0.25457763671875, -38.54545593261719, -11.96368408203125, -60.36363983154297, 31.67266845703125, -69.9636459350586, 31.67266845703125, -92.65454864501953, 8.98187255859375, -99.6363754272461, -19.81817626953125, -86.54546356201172, -54.727294921875, -69.9636459350586, -62.58184814453125, -60.36363983154297, -54.727294921875, -47.27272033691406"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap13" fill="DODGERBLUE" layoutX="960.0"
-			layoutY="143.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-31.34552001953125, -46.05455780029297, -38.32733154296875, -25.98181915283203, -68.87274169921875, -16.38182830810547, -61.89093017578125, 1.072723388671875, -50.54547119140625, -5.8546142578125, -38.32733154296875, 1.072723388671875, -12.14544677734375, -5.8546142578125, -3.41815185546875, 1.072723388671875, 15.78179931640625, -5.8546142578125, 41.09088134765625, -5.8546142578125, 22.76361083984375, -16.38182830810547, 22.76361083984375, -46.05455780029297, -12.14544677734375, -59.14545440673828, -25.23638916015625, -59.14545440673828"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap14" fill="DODGERBLUE" layoutX="269.0"
-			layoutY="483.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="540.963623046875, -290.0545654296875, 547.9454345703125, -326.7091064453125, 503.43634033203125, -345.9090881347656, 438.85455322265625, -314.0, 340.0, -278.7091064453125, 237.0, -218.0, 130.78179931640625, -218.0, 74.05453491210938, -147.0, 209.0, -147.0, 348.963623046875, -200.16366577148438, 365.0, -257.0, 451.9454345703125, -302.2727355957031, 515.654541015625, -314.0"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap15" fill="DODGERBLUE" layoutX="727.0"
-			layoutY="235.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="13.50909423828125, -3.781829833984375, 63.2545166015625, -31.7091064453125, 63.2545166015625, -54.27272033691406, 19.6181640625, -45.6727294921875, 0.0, -45.6727294921875, -29.2545166015625, -31.7091064453125, -53.69091796875, -22.109100341796875, -72.0181884765625, -10.763641357421875, -44.963623046875, -10.763641357421875, -29.2545166015625, -3.781829833984375"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap16" fill="DODGERBLUE" layoutX="881.0"
-			layoutY="234.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-28.272705078125, -0.909088134765625, 10.99993896484375, -0.909088134765625, 10.99993896484375, -39.30908203125, 17.98187255859375, -60.254547119140625, 10.99993896484375, -83.81817626953125, -21.2908935546875, -90.80000305175781, -37.87274169921875, -77.70909118652344, -62.30908203125, -77.70909118652344, -62.30908203125, -68.10908508300781, -50.963623046875, -54.14544677734375, -62.30908203125, -23.600006103515625"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap17" fill="DODGERBLUE" layoutX="934.0"
-			layoutY="202.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="71.45452880859375, -60.0, 24.32720947265625, -51.81817626953125, 0.76361083984375, -51.81817626953125, -28.03631591796875, -51.81817626953125, -28.03631591796875, -27.381820678710938, -36.76361083984375, 31.090911865234375, 45.27276611328125, 22.3636474609375, 33.92730712890625, 3.16363525390625, 7.74542236328125, -4.69091796875, 13.85455322265625, -20.399993896484375, 24.32720947265625, -36.10908508300781, 45.27276611328125, -42.21818542480469, 60.10906982421875, -27.381820678710938, 71.45452880859375, -36.10908508300781, 60.10906982421875, -42.21818542480469"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap18" fill="DODGERBLUE" layoutX="1168.0"
-			layoutY="262.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-164.29095458984375, -62.072723388671875, -108.4364013671875, -18.436370849609375, -108.4364013671875, 0.763641357421875, -92.727294921875, 18.218170166015625, -68.291015625, 24.3272705078125, -49.963623046875, 40.036346435546875, 7.6363525390625, 62.727264404296875, 24.2181396484375, 53.12725830078125, 32.0726318359375, 40.036346435546875, 24.2181396484375, 30.436370849609375, 32.0726318359375, 18.218170166015625, 59.127197265625, -7.963653564453125, 59.127197265625, -29.781829833984375, 79.199951171875, -55.090911865234375, -40.3636474609375, -83.0181884765625, -134.6182861328125, -92.61817932128906, -174.763671875, -83.0181884765625"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap19" fill="DODGERBLUE" layoutX="759.0"
-			layoutY="263.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="49.96356201171875, -38.254547119140625, 49.96356201171875, -60.0, 5.4544677734375, -27.781829833984375, -57.25457763671875, -23.418167114257812, -108.7454833984375, -27.781814575195312, -121.96368408203125, -23.418182373046875, -114.98187255859375, -10.3272705078125, -35.43634033203125, -16.436355590820312, 5.4544677734375, -10.327255249023438, 18.54541015625, -16.436370849609375, 39.4908447265625, -23.418182373046875"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap20" fill="DODGERBLUE" layoutX="696.0"
-			layoutY="313.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="79.0545654296875, -32.781829833984375, 79.0545654296875, -49.3636474609375, 7.49090576171875, -58.96363830566406, -57.0909423828125, -58.96363830566406, -77.16363525390625, -17.945465087890625, -105.09088134765625, -17.945465087890625, -142.6181640625, 4.74542236328125, -162.69091796875, 4.74542236328125, -181.89093017578125, 14.345428466796875, -191.49093627929688, 25.690887451171875, 89.52728271484375, 25.690887451171875, 66.83636474609375, -17.945465087890625"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap21" fill="DODGERBLUE" layoutX="223.0"
-			layoutY="432.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="729.2182006835938, 61.163604736328125, 770.2363891601562, 33.236358642578125, 706.5272827148438, 45.454559326171875, 588.7091064453125, -33.963653564453125, 538.0908203125, -60.14544677734375, 514.5272216796875, -88.07275390625, -165.0, -88.07275390625, -165.0, 333.0, 588.7091064453125, 333.0, 588.7091064453125, 315.99993896484375, 625.3636474609375, 304.65447998046875, 631.47265625, 280.2181396484375, 744.9273071289062, 262.76361083984375, 758.0181274414062, 237.4544677734375, 729.2182006835938, 228.72723388671875, 758.0181274414062, 179.8544921875, 783.3272094726562, 172.8726806640625, 783.3272094726562, 122.2545166015625, 737.0726928710938, 84.72723388671875"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap22" fill="DODGERBLUE" layoutX="817.0"
-			layoutY="399.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="21.76361083984375, -2.7091064453125, 39.21820068359375, -2.7091064453125, 15.654541015625, -19.290924072265625, 0.0, -31.50909423828125, -27.9818115234375, -39.3636474609375, -36.7091064453125, -53.3272705078125, -65.50909423828125, -53.3272705078125, -51.54547119140625, -31.50909423828125, -8.78179931640625, -19.290924072265625, 0.0, -2.7091064453125"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap23" fill="DODGERBLUE" layoutX="1046.0"
-			layoutY="414.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-81.56365966796875, 325.272705078125, -124.32733154296875, 315.67266845703125, -139.1636962890625, 334.8726806640625, -182.800048828125, 354.0, 113.054443359375, 354.0, 120.9090576171875, 345.34539794921875, 187.236328125, 334.8726806640625, 216.9090576171875, 289.4908447265625, 250.9454345703125, 295.5999755859375, 266.654541015625, 282.509033203125, 292.8363037109375, 266.7999267578125, 283.236328125, 233.63629150390625, 292.8363037109375, 225.78179931640625, 283.236328125, 203.96356201171875, 302.436279296875, 203.96356201171875, 243.0908203125, 166.43634033203125, 93.8544921875, -0.254547119140625, 100.8363037109375, -17.7091064453125, 36.2545166015625, -77.05453491210938, 43.236328125, -96.25454711914062, 10.9454345703125, -106.72726440429688, -33.56365966796875, -145.12725830078125, -75.45458984375, -180.03639221191406, -139.1636962890625, -171.30909729003906, -208.109130859375, -186.1454620361328, -223.8182373046875, -198.36366271972656, -236.90911865234375, -171.30909729003906, -264.83642578125, -159.96363830566406, -258.727294921875, -138.14544677734375, -278.800048828125, -116.3272705078125, -258.727294921875, -77.05453491210938, -258.727294921875, -62.218170166015625, -236.90911865234375, -56.109100341796875, -208.109130859375, -36.909088134765625, -182.800048828125, -17.7091064453125, -154.00006103515625, -0.254547119140625, -139.1636962890625, 13.709075927734375, -118.21820068359375, 22.436370849609375, -108.61822509765625, 33.781829833984375, -52.763671875, 22.436370849609375, -26.58184814453125, 33.781829833984375, -17.8546142578125, 55.600006103515625, -40.54547119140625, 80.90908813476562, -52.763671875, 87.89089965820312, -52.763671875, 104.47265625, -17.8546142578125, 118.43634033203125, -11.7454833984375, 145.4908447265625, -0.4000244140625, 166.43634033203125, -11.7454833984375, 189.99993896484375, 10.9454345703125, 225.78179931640625, 10.9454345703125, 282.509033203125, 24.9090576171875, 302.581787109375, -40.54547119140625, 289.4908447265625, -33.56365966796875, 302.581787109375"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap24" fill="DODGERBLUE" layoutX="875.0"
-			layoutY="423.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="24.85455322265625, 30.890899658203125, 50.16363525390625, 21.290924072265625, 32.70904541015625, 14.309051513671875, 24.85455322265625, 7.3272705078125, 15.25457763671875, -0.52728271484375, 0.0, -10.127288818359375, -24.89093017578125, -22.345458984375, -43.21820068359375, -22.345458984375, -36.23638916015625, -10.127288818359375, -16.16363525390625, -0.52728271484375"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap25" fill="DODGERBLUE" layoutX="984.0"
-			layoutY="471.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="35.41815185546875, 2.963653564453125, 35.41815185546875, -11.872711181640625, 24.94549560546875, -19.727264404296875, 7.49090576171875, -25.836395263671875, -13.45452880859375, -19.727264404296875, -39.63641357421875, -19.727264404296875, -56.21820068359375, -19.727264404296875, -78.03631591796875, -11.872711181640625, -49.23638916015625, -3.145477294921875, -19.56365966796875, -3.145477294921875, 14.47271728515625, -11.872711181640625, 7.49090576171875, 10.818145751953125, 24.94549560546875, 10.818145751953125"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap26" fill="DODGERBLUE" layoutX="966.0"
-			layoutY="523.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="18.50909423828125, -24.600006103515625, 29.85455322265625, -35.945465087890625, 18.50909423828125, -43.800018310546875, 12.39996337890625, -35.945465087890625, -6.79998779296875, -24.600006103515625, 6.103515625E-5, -9.763671875, 29.85455322265625, 5.9454345703125, 18.50909423828125, -9.763671875"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Polygon fx:id="polyMap27" fill="DODGERBLUE" layoutX="1001.0"
-			layoutY="589.0" onMouseClicked="#onStatePress" opacity="0.0"
-			points="-175.3272705078125, 179.0, -150.0181884765625, 179.0, -98.52728271484375, 156.38177490234375, -83.69085693359375, 132.818115234375, -41.79998779296875, 145.9090576171875, 6.103515625E-5, 124.09088134765625, 6.103515625E-5, 107.509033203125, 65.54541015625, 124.09088134765625, 40.236328125, 101.39996337890625, 49.8363037109375, 77.8363037109375, 40.236328125, 65.6181640625, 49.8363037109375, 54.272705078125, 29.7635498046875, 46.41815185546875, 22.78173828125, 17.6181640625, 40.236328125, -9.4364013671875, 29.7635498046875, -31.25457763671875, 29.7635498046875, -49.58184814453125, 1.220703125E-4, -64.418212890625, -6.0181884765625, -55.69097900390625, 14.92724609375, -31.25457763671875, 8.818115234375, 27.2181396484375, -12.1273193359375, 27.2181396484375, 1.220703125E-4, 46.41815185546875, -23.4727783203125, 46.41815185546875, -41.7999267578125, 71.72723388671875, 1.220703125E-4, 71.72723388671875, -23.4727783203125, 107.509033203125, -41.7999267578125, 116.236328125, -72.345458984375, 116.236328125, -106.3818359375, 132.818115234375, -141.29095458984375, 124.09088134765625, -150.0181884765625, 156.38177490234375, -169.21820068359375, 156.38177490234375, -183.18182373046875, 163.36358642578125"
-			stroke="BLACK" strokeType="INSIDE" />
-		<Rectangle fx:id="sideBar" arcHeight="5.0" arcWidth="5.0"
-			fill="#660e86" height="768.0" layoutX="1233.0" stroke="BLACK"
-			strokeType="INSIDE" visible="false" width="133.0" />
-		<Label fx:id="stateNumberSideBarLabel" layoutX="1243.0"
-			layoutY="20.0" prefHeight="28.0" prefWidth="113.0" text="State 25"
-			textFill="#d4eb0b" visible="false">
+		<Polygon fx:id="polyMap1" fill="DODGERBLUE" layoutX="125.0" layoutY="326.0" onMouseClicked="#onStatePress" opacity="0.0" points="-105.72727966308594, -181.92727661132812, -90.89091491699219, -165.345458984375, -84.78181457519531, -132.0, -68.20002746582031, -118.21817016601562, -68.20001220703125, 12.690887451171875, 209.3272705078125, 12.690887451171875, 268.6727294921875, -63.236358642578125, 381.2545166015625, -70.21820068359375, 486.0, -132.0, 570.6363525390625, -155.74545288085938, 486.0, -181.92727661132812, 486.0, -225.56362915039062, 443.2181396484375, -219.45455932617188, 357.6908874511719, -240.39999389648438, 283.5090637207031, -240.39999389648438, 53.98179626464844, -279.6727294921875, -68.20002746582031, -279.6727294921875, -84.78181457519531, -257.85455322265625, -61.21818542480469, -225.56362915039062" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap2" fill="DODGERBLUE" layoutX="628.0" layoutY="116.0" onMouseClicked="#onStatePress" opacity="0.0" points="-7.54547119140625, 8.872718811035156, 33.47265625, -10.327278137207031, 13.39996337890625, -23.418190002441406, 22.12725830078125, -38.254554748535156, 40.45452880859375, -50.47272491455078, -7.54547119140625, -29.52727508544922" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap3" fill="DODGERBLUE" layoutX="683.0" layoutY="133.0" onMouseClicked="#onStatePress" opacity="0.0" points="82.32720947265625, -3.763641357421875, 66.6181640625, -24.70909881591797, 76.21820068359375, -36.927284240722656, 66.6181640625, -49.14545440673828, 45.6727294921875, -60.49091339111328, 26.47271728515625, -73.58182525634766, -3.20001220703125, -60.49091339111328, -31.12725830078125, -49.14545440673828, -12.800048828125, -24.70909881591797, -60.800048828125, 4.090911865234375, 19.4908447265625, 29.399993896484375" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap4" fill="DODGERBLUE" layoutX="761.0" layoutY="89.0" onMouseClicked="#onStatePress" opacity="0.0" points="-0.03643798828125, -6.018180847167969, 33.127197265625, -14.745460510253906, 58.43634033203125, -20.85454559326172, 58.43634033203125, -41.80000305175781, 42.72723388671875, -48.781822204589844, 42.72723388671875, -41.80000305175781, 7.81817626953125, -33.94546127319336, -32.3272705078125, -33.94546127319336, -42.800048828125, -33.945457458496094" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap5" fill="DODGERBLUE" layoutX="844.0" layoutY="106.0" onMouseClicked="#onStatePress" opacity="0.0" points="-6.10906982421875, -54.436363220214844, -17.45452880859375, -54.436363220214844, -17.45452880859375, -37.85454559326172, -27.92724609375, -25.63636016845703, -17.45452880859375, -25.63636016845703, -27.92724609375, -9.054542541503906, -17.45452880859375, 7.527259826660156, -17.45452880859375, -9.054542541503906, 8.727294921875, -9.054542541503906, 52.36358642578125, -31.745460510253906, 37.52728271484375, -37.85454559326172, 19.20001220703125, -25.63636016845703, 1.74542236328125, -44.83637237548828" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap6" fill="DODGERBLUE" layoutX="869.0" layoutY="63.0" onMouseClicked="#onStatePress" opacity="0.0" points="15.14544677734375, -2.7090988159179688, 23.0, -8.818187713623047, 9.036376953125, -24.527278900146484, -0.56365966796875, -16.6727294921875, -17.14544677734375, -8.818183898925781, -0.56365966796875, 6.890907287597656" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap7" fill="DODGERBLUE" layoutX="972.0" layoutY="52.0" onMouseClicked="#onStatePress" opacity="0.0" points="-23.2728271484375, 21.381813049316406, -12.79998779296875, 30.98181915283203, 5.52728271484375, 30.98181915283203, -12.79998779296875, 10.909080505371094" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap8" fill="DODGERBLUE" layoutX="1146.0" layoutY="164.0" onMouseClicked="#onStatePress" opacity="0.0" points="34.0, 21.090911865234375, 109.054443359375, 31.563629150390625, 34.0, -97.5999984741211, -26.21826171875, -83.6363754272461, -66.3636474609375, -91.49091339111328, -92.5455322265625, -77.52727508544922, -105.6363525390625, -83.6363754272461, -125.7091064453125, -83.6363754272461, -161.490966796875, -77.52727508544922, -153.63641357421875, -43.49091339111328, -135.30914306640625, -29.527267456054688, -135.30914306640625, -1.600006103515625, -17.490966796875, 5.3818206787109375" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap9" fill="DODGERBLUE" layoutX="779.0" layoutY="140.0" onMouseClicked="#onStatePress" opacity="0.0" points="39.5635986328125, -29.090919494628906, 29.09088134765625, -42.18181610107422, 39.5635986328125, -52.65454864501953, 22.98175048828125, -58.763633728027344, -13.67279052734375, -52.65454864501953, -13.67279052734375, -36.072731018066406" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap10" fill="DODGERBLUE" layoutX="765.0" layoutY="171.0" onMouseClicked="#onStatePress" opacity="0.0" points="18.78173828125, -28.6727294921875, 44.963623046875, -53.98181915283203, 18.78173828125, -60.090919494628906, 0.3271484375, -60.090919494628906, 8.30908203125, -41.763641357421875" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap11" fill="DODGERBLUE" layoutX="833.0" layoutY="201.0" onMouseClicked="#onStatePress" opacity="0.0" points="-34.3818359375, -66.0545654296875, -13.43634033203125, -47.727294921875, 13.6181640625, -54.30909729003906, -3.83636474609375, -66.0545654296875, -13.43634033203125, -83.10909271240234, -23.036376953125, -74.38182830810547" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap12" fill="DODGERBLUE" layoutX="890.0" layoutY="180.0" onMouseClicked="#onStatePress" opacity="0.0" points="-34.654541015625, -38.54545593261719, 0.25457763671875, -38.54545593261719, -11.96368408203125, -60.36363983154297, 31.67266845703125, -69.9636459350586, 31.67266845703125, -92.65454864501953, 8.98187255859375, -99.6363754272461, -19.81817626953125, -86.54546356201172, -54.727294921875, -69.9636459350586, -62.58184814453125, -60.36363983154297, -54.727294921875, -47.27272033691406" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap13" fill="DODGERBLUE" layoutX="960.0" layoutY="143.0" onMouseClicked="#onStatePress" opacity="0.0" points="-31.34552001953125, -46.05455780029297, -38.32733154296875, -25.98181915283203, -68.87274169921875, -16.38182830810547, -61.89093017578125, 1.072723388671875, -50.54547119140625, -5.8546142578125, -38.32733154296875, 1.072723388671875, -12.14544677734375, -5.8546142578125, -3.41815185546875, 1.072723388671875, 15.78179931640625, -5.8546142578125, 41.09088134765625, -5.8546142578125, 22.76361083984375, -16.38182830810547, 22.76361083984375, -46.05455780029297, -12.14544677734375, -59.14545440673828, -25.23638916015625, -59.14545440673828" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap14" fill="DODGERBLUE" layoutX="269.0" layoutY="483.0" onMouseClicked="#onStatePress" opacity="0.0" points="540.963623046875, -290.0545654296875, 547.9454345703125, -326.7091064453125, 503.43634033203125, -345.9090881347656, 438.85455322265625, -314.0, 340.0, -278.7091064453125, 237.0, -218.0, 130.78179931640625, -218.0, 74.05453491210938, -147.0, 209.0, -147.0, 348.963623046875, -200.16366577148438, 365.0, -257.0, 451.9454345703125, -302.2727355957031, 515.654541015625, -314.0" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap15" fill="DODGERBLUE" layoutX="727.0" layoutY="235.0" onMouseClicked="#onStatePress" opacity="0.0" points="13.50909423828125, -3.781829833984375, 63.2545166015625, -31.7091064453125, 63.2545166015625, -54.27272033691406, 19.6181640625, -45.6727294921875, 0.0, -45.6727294921875, -29.2545166015625, -31.7091064453125, -53.69091796875, -22.109100341796875, -72.0181884765625, -10.763641357421875, -44.963623046875, -10.763641357421875, -29.2545166015625, -3.781829833984375" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap16" fill="DODGERBLUE" layoutX="881.0" layoutY="234.0" onMouseClicked="#onStatePress" opacity="0.0" points="-28.272705078125, -0.909088134765625, 10.99993896484375, -0.909088134765625, 10.99993896484375, -39.30908203125, 17.98187255859375, -60.254547119140625, 10.99993896484375, -83.81817626953125, -21.2908935546875, -90.80000305175781, -37.87274169921875, -77.70909118652344, -62.30908203125, -77.70909118652344, -62.30908203125, -68.10908508300781, -50.963623046875, -54.14544677734375, -62.30908203125, -23.600006103515625" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap17" fill="DODGERBLUE" layoutX="934.0" layoutY="202.0" onMouseClicked="#onStatePress" opacity="0.0" points="71.45452880859375, -60.0, 24.32720947265625, -51.81817626953125, 0.76361083984375, -51.81817626953125, -28.03631591796875, -51.81817626953125, -28.03631591796875, -27.381820678710938, -36.76361083984375, 31.090911865234375, 45.27276611328125, 22.3636474609375, 33.92730712890625, 3.16363525390625, 7.74542236328125, -4.69091796875, 13.85455322265625, -20.399993896484375, 24.32720947265625, -36.10908508300781, 45.27276611328125, -42.21818542480469, 60.10906982421875, -27.381820678710938, 71.45452880859375, -36.10908508300781, 60.10906982421875, -42.21818542480469" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap18" fill="DODGERBLUE" layoutX="1168.0" layoutY="262.0" onMouseClicked="#onStatePress" opacity="0.0" points="-164.29095458984375, -62.072723388671875, -108.4364013671875, -18.436370849609375, -108.4364013671875, 0.763641357421875, -92.727294921875, 18.218170166015625, -68.291015625, 24.3272705078125, -49.963623046875, 40.036346435546875, 7.6363525390625, 62.727264404296875, 24.2181396484375, 53.12725830078125, 32.0726318359375, 40.036346435546875, 24.2181396484375, 30.436370849609375, 32.0726318359375, 18.218170166015625, 59.127197265625, -7.963653564453125, 59.127197265625, -29.781829833984375, 79.199951171875, -55.090911865234375, -40.3636474609375, -83.0181884765625, -134.6182861328125, -92.61817932128906, -174.763671875, -83.0181884765625" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap19" fill="DODGERBLUE" layoutX="759.0" layoutY="263.0" onMouseClicked="#onStatePress" opacity="0.0" points="49.96356201171875, -38.254547119140625, 49.96356201171875, -60.0, 5.4544677734375, -27.781829833984375, -57.25457763671875, -23.418167114257812, -108.7454833984375, -27.781814575195312, -121.96368408203125, -23.418182373046875, -114.98187255859375, -10.3272705078125, -35.43634033203125, -16.436355590820312, 5.4544677734375, -10.327255249023438, 18.54541015625, -16.436370849609375, 39.4908447265625, -23.418182373046875" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap20" fill="DODGERBLUE" layoutX="696.0" layoutY="313.0" onMouseClicked="#onStatePress" opacity="0.0" points="79.0545654296875, -32.781829833984375, 79.0545654296875, -49.3636474609375, 7.49090576171875, -58.96363830566406, -57.0909423828125, -58.96363830566406, -77.16363525390625, -17.945465087890625, -105.09088134765625, -17.945465087890625, -142.6181640625, 4.74542236328125, -162.69091796875, 4.74542236328125, -181.89093017578125, 14.345428466796875, -191.49093627929688, 25.690887451171875, 89.52728271484375, 25.690887451171875, 66.83636474609375, -17.945465087890625" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap21" fill="DODGERBLUE" layoutX="223.0" layoutY="432.0" onMouseClicked="#onStatePress" opacity="0.0" points="729.2182006835938, 61.163604736328125, 770.2363891601562, 33.236358642578125, 706.5272827148438, 45.454559326171875, 588.7091064453125, -33.963653564453125, 538.0908203125, -60.14544677734375, 514.5272216796875, -88.07275390625, -165.0, -88.07275390625, -165.0, 333.0, 588.7091064453125, 333.0, 588.7091064453125, 315.99993896484375, 625.3636474609375, 304.65447998046875, 631.47265625, 280.2181396484375, 744.9273071289062, 262.76361083984375, 758.0181274414062, 237.4544677734375, 729.2182006835938, 228.72723388671875, 758.0181274414062, 179.8544921875, 783.3272094726562, 172.8726806640625, 783.3272094726562, 122.2545166015625, 737.0726928710938, 84.72723388671875" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap22" fill="DODGERBLUE" layoutX="817.0" layoutY="399.0" onMouseClicked="#onStatePress" opacity="0.0" points="21.76361083984375, -2.7091064453125, 39.21820068359375, -2.7091064453125, 15.654541015625, -19.290924072265625, 0.0, -31.50909423828125, -27.9818115234375, -39.3636474609375, -36.7091064453125, -53.3272705078125, -65.50909423828125, -53.3272705078125, -51.54547119140625, -31.50909423828125, -8.78179931640625, -19.290924072265625, 0.0, -2.7091064453125" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap23" fill="DODGERBLUE" layoutX="1046.0" layoutY="414.0" onMouseClicked="#onStatePress" opacity="0.0" points="-81.56365966796875, 325.272705078125, -124.32733154296875, 315.67266845703125, -139.1636962890625, 334.8726806640625, -182.800048828125, 354.0, 113.054443359375, 354.0, 120.9090576171875, 345.34539794921875, 187.236328125, 334.8726806640625, 216.9090576171875, 289.4908447265625, 250.9454345703125, 295.5999755859375, 266.654541015625, 282.509033203125, 292.8363037109375, 266.7999267578125, 283.236328125, 233.63629150390625, 292.8363037109375, 225.78179931640625, 283.236328125, 203.96356201171875, 302.436279296875, 203.96356201171875, 243.0908203125, 166.43634033203125, 93.8544921875, -0.254547119140625, 100.8363037109375, -17.7091064453125, 36.2545166015625, -77.05453491210938, 43.236328125, -96.25454711914062, 10.9454345703125, -106.72726440429688, -33.56365966796875, -145.12725830078125, -75.45458984375, -180.03639221191406, -139.1636962890625, -171.30909729003906, -208.109130859375, -186.1454620361328, -223.8182373046875, -198.36366271972656, -236.90911865234375, -171.30909729003906, -264.83642578125, -159.96363830566406, -258.727294921875, -138.14544677734375, -278.800048828125, -116.3272705078125, -258.727294921875, -77.05453491210938, -258.727294921875, -62.218170166015625, -236.90911865234375, -56.109100341796875, -208.109130859375, -36.909088134765625, -182.800048828125, -17.7091064453125, -154.00006103515625, -0.254547119140625, -139.1636962890625, 13.709075927734375, -118.21820068359375, 22.436370849609375, -108.61822509765625, 33.781829833984375, -52.763671875, 22.436370849609375, -26.58184814453125, 33.781829833984375, -17.8546142578125, 55.600006103515625, -40.54547119140625, 80.90908813476562, -52.763671875, 87.89089965820312, -52.763671875, 104.47265625, -17.8546142578125, 118.43634033203125, -11.7454833984375, 145.4908447265625, -0.4000244140625, 166.43634033203125, -11.7454833984375, 189.99993896484375, 10.9454345703125, 225.78179931640625, 10.9454345703125, 282.509033203125, 24.9090576171875, 302.581787109375, -40.54547119140625, 289.4908447265625, -33.56365966796875, 302.581787109375" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap24" fill="DODGERBLUE" layoutX="875.0" layoutY="423.0" onMouseClicked="#onStatePress" opacity="0.0" points="24.85455322265625, 30.890899658203125, 50.16363525390625, 21.290924072265625, 32.70904541015625, 14.309051513671875, 24.85455322265625, 7.3272705078125, 15.25457763671875, -0.52728271484375, 0.0, -10.127288818359375, -24.89093017578125, -22.345458984375, -43.21820068359375, -22.345458984375, -36.23638916015625, -10.127288818359375, -16.16363525390625, -0.52728271484375" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap25" fill="DODGERBLUE" layoutX="984.0" layoutY="471.0" onMouseClicked="#onStatePress" opacity="0.0" points="35.41815185546875, 2.963653564453125, 35.41815185546875, -11.872711181640625, 24.94549560546875, -19.727264404296875, 7.49090576171875, -25.836395263671875, -13.45452880859375, -19.727264404296875, -39.63641357421875, -19.727264404296875, -56.21820068359375, -19.727264404296875, -78.03631591796875, -11.872711181640625, -49.23638916015625, -3.145477294921875, -19.56365966796875, -3.145477294921875, 14.47271728515625, -11.872711181640625, 7.49090576171875, 10.818145751953125, 24.94549560546875, 10.818145751953125" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap26" fill="DODGERBLUE" layoutX="966.0" layoutY="523.0" onMouseClicked="#onStatePress" opacity="0.0" points="18.50909423828125, -24.600006103515625, 29.85455322265625, -35.945465087890625, 18.50909423828125, -43.800018310546875, 12.39996337890625, -35.945465087890625, -6.79998779296875, -24.600006103515625, 6.103515625E-5, -9.763671875, 29.85455322265625, 5.9454345703125, 18.50909423828125, -9.763671875" stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyMap27" fill="DODGERBLUE" layoutX="1001.0" layoutY="589.0" onMouseClicked="#onStatePress" opacity="0.0" points="-175.3272705078125, 179.0, -150.0181884765625, 179.0, -98.52728271484375, 156.38177490234375, -83.69085693359375, 132.818115234375, -41.79998779296875, 145.9090576171875, 6.103515625E-5, 124.09088134765625, 6.103515625E-5, 107.509033203125, 65.54541015625, 124.09088134765625, 40.236328125, 101.39996337890625, 49.8363037109375, 77.8363037109375, 40.236328125, 65.6181640625, 49.8363037109375, 54.272705078125, 29.7635498046875, 46.41815185546875, 22.78173828125, 17.6181640625, 40.236328125, -9.4364013671875, 29.7635498046875, -31.25457763671875, 29.7635498046875, -49.58184814453125, 1.220703125E-4, -64.418212890625, -6.0181884765625, -55.69097900390625, 14.92724609375, -31.25457763671875, 8.818115234375, 27.2181396484375, -12.1273193359375, 27.2181396484375, 1.220703125E-4, 46.41815185546875, -23.4727783203125, 46.41815185546875, -41.7999267578125, 71.72723388671875, 1.220703125E-4, 71.72723388671875, -23.4727783203125, 107.509033203125, -41.7999267578125, 116.236328125, -72.345458984375, 116.236328125, -106.3818359375, 132.818115234375, -141.29095458984375, 124.09088134765625, -150.0181884765625, 156.38177490234375, -169.21820068359375, 156.38177490234375, -183.18182373046875, 163.36358642578125" stroke="BLACK" strokeType="INSIDE" />
+		<Rectangle fx:id="sideBar" arcHeight="5.0" arcWidth="5.0" fill="#111111" height="768.0" layoutX="1233.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="133.0" />
+		<Label fx:id="stateNumberSideBarLabel" layoutX="1243.0" layoutY="20.0" prefHeight="28.0" prefWidth="113.0" text="State 25" textFill="#d4eb0b" visible="false">
 			<font>
-				<Font size="28.0" />
+				<Font size="16.0" />
 			</font>
 		</Label>
-		<Label fx:id="armyNumberSideBarLabel" layoutX="1243.0"
-			layoutY="62.0" prefHeight="28.0" prefWidth="113.0" text="25 soldier"
-			textFill="#d4eb0b" visible="false">
+		<Label fx:id="armyNumberSideBarLabel" layoutX="1243.0" layoutY="62.0" prefHeight="28.0" prefWidth="113.0" textFill="#fbfcf9" visible="false">
 			<font>
-				<Font size="24.0" />
+				<Font size="16.0" />
 			</font>
 		</Label>
-		<Button fx:id="attackSideBarButton" layoutX="1259.0"
-			layoutY="363.0" mnemonicParsing="false" prefHeight="43.0"
-			prefWidth="82.0" text="Attack" visible="false" />
-		<Button fx:id="addArmySideBarButton" layoutX="1259.0"
-			layoutY="197.0" mnemonicParsing="false" onAction="#distribute"
-			prefHeight="30.0" prefWidth="82.0" text="Add Army" visible="false" />
-		<TextField fx:id="armyNumberToAddSideBarTextField"
-			layoutX="1239.0" layoutY="158.0" prefHeight="20.0" prefWidth="122.0"
-			visible="false" />
-		<Label layoutX="1244.0" layoutY="125.0" prefHeight="28.0"
-			prefWidth="113.0" text="insert army number" textFill="#d4eb0b"
-			visible="false" />
-		<ChoiceBox fx:id="adjacentStatesSideBarChoiceBox"
-			layoutX="1243.0" layoutY="323.0" prefHeight="26.0" prefWidth="113.0"
-			visible="false" />
-		<Label layoutX="1255.0" layoutY="282.0" prefHeight="28.0"
-			prefWidth="113.0" text="choose state to" textFill="#d4eb0b"
-			visible="false" />
-		<Label layoutX="1280.0" layoutY="296.0" prefHeight="28.0"
-			prefWidth="113.0" text="attack" textFill="#d4eb0b" visible="false" />
-		<Button layoutX="182.0" layoutY="34.0" mnemonicParsing="false"
-			onAction="#start" prefHeight="25.0" prefWidth="122.0"
-			style="-fx-background-color: Green;" text="Start" />
-		<Button fx:id="nextTurnBtn" layoutX="60.0" layoutY="34.0"
-			mnemonicParsing="false" onAction="#changeTurn" prefHeight="25.0"
-			prefWidth="122.0" style="-fx-background-color: black;"
-			text="Finish turn" textFill="#f5f4f4" visible="false" />
-		<Label fx:id="currentActionLbl" layoutX="60.0" layoutY="64.0"
-			textFill="#39023c">
+		<Button fx:id="attackSideBarButton" layoutX="1259.0" layoutY="363.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="82.0" text="Attack" visible="false">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<Button fx:id="addArmySideBarButton" layoutX="1259.0" layoutY="197.0" mnemonicParsing="false" onAction="#distribute" prefHeight="30.0" prefWidth="82.0" text="Add Army" visible="false">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<TextField fx:id="armyNumberToAddSideBarTextField" layoutX="1239.0" layoutY="158.0" prefHeight="20.0" prefWidth="122.0" visible="false" />
+		<Label layoutX="1244.0" layoutY="125.0" prefHeight="28.0" prefWidth="113.0" text="insert army number" textFill="#d4eb0b" visible="false" />
+		<ChoiceBox fx:id="adjacentStatesSideBarChoiceBox" layoutX="1243.0" layoutY="323.0" prefHeight="26.0" prefWidth="113.0" visible="false" />
+		<Label layoutX="1255.0" layoutY="282.0" prefHeight="28.0" prefWidth="113.0" text="choose state to" textFill="#d4eb0b" visible="false" />
+		<Label layoutX="1280.0" layoutY="296.0" prefHeight="28.0" prefWidth="113.0" text="attack" textFill="#d4eb0b" visible="false" />
+		<Button layoutX="182.0" layoutY="34.0" mnemonicParsing="false" onAction="#start" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: orange;" text="Start">
+			<font>
+				<Font name="System Bold" size="16.0" />
+			</font>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<Button fx:id="nextTurnBtn" layoutX="60.0" layoutY="34.0" mnemonicParsing="false" onAction="#changeTurn" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: black;" text="Finish turn" textFill="#f5f4f4" visible="false">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<Label fx:id="currentActionLbl" layoutX="60.0" layoutY="64.0" textFill="#082801">
 			<font>
 				<Font size="22.0" />
 			</font>
 		</Label>
-		<Label fx:id="playerNameLbl" layoutX="60.0" layoutY="101.0"
-			textFill="#39023c">
+		<Label fx:id="playerNameLbl" layoutX="60.0" layoutY="101.0" textFill="#082801">
 			<font>
 				<Font name="Arial" size="22.0" />
 			</font>
