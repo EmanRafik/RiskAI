@@ -28,23 +28,34 @@ public class GreedyAgent extends Player {
 	@Override
 	public void performAttacks() {
 		// TODO Auto-generated method stub
-		for (int i = 0; i < 3; i++) {
-			searchHeap = new PriorityQueue<>();
-			State current = new State();
-			current.setTerritories(cloneTerritories(Game.getTerritories()));
-			Player opponent = Game.getPlayers()[1 - super.getPlayerID()];
-			current.setOpponentTerritories(new ArrayList<Integer>(opponent.getTerritories()));
-			current.setPlayerTerritories(new ArrayList<Integer>(getTerritories()));
+		searchHeap = new PriorityQueue<>();
+		State current = new State();
+		current.setTerritories(cloneTerritories(Game.getTerritories()));
+		Player opponent = Game.getPlayers()[1 - super.getPlayerID()];
+		current.setOpponentTerritories(new ArrayList<Integer>(opponent.getTerritories()));
+		current.setPlayerTerritories(new ArrayList<Integer>(getTerritories()));
+		current.calculateHeuristic();
 
-			addChildren(current);
-			if (searchHeap.size() > 0) {
-				State nextState = searchHeap.peek();
-				this.setTerritories(new ArrayList<Integer>(nextState.getPlayerTerritories()));
-				Game.getPlayers()[1 - super.getPlayerID()]
-						.setTerritories(new ArrayList<Integer>(nextState.getOpponentTerritories()));
-				Game.setTerritories(cloneTerritories(nextState.getTerritories()));
+		addChildren(current);
+		int i = 0;
+		while (searchHeap.size() > 0) {
+			if (searchHeap.peek().compareTo(current) > 0) {
+				System.out.println("====> "+i);
+				break;
 			}
+			else
+			{
+				System.out.println("complete");
+			}
+			i++;
+			current = searchHeap.peek();
+			searchHeap.clear();
+			addChildren(current);
 		}
+		this.setTerritories(new ArrayList<Integer>(current.getPlayerTerritories()));
+		Game.getPlayers()[1 - super.getPlayerID()]
+				.setTerritories(new ArrayList<Integer>(current.getOpponentTerritories()));
+		Game.setTerritories(cloneTerritories(current.getTerritories()));
 		GameConfig.updateTerritories(Game.getTerritories());
 
 	}
@@ -55,7 +66,7 @@ public class GreedyAgent extends Player {
 			List<Integer> adjacentTerritorries = terr[territory].getAdjacentTerrs();
 			for (Integer adj : adjacentTerritorries) {
 				if (parent.getOpponentTerritories().contains(adj)) {
-					if (terr[territory].getTroopsCount() > terr[adj].getTroopsCount()) {
+					if (terr[territory].getTroopsCount() > terr[adj].getTroopsCount() + 1) {
 						State child = new State();
 						List<Integer> childPlayerTerritories = new ArrayList<>(parent.getPlayerTerritories());
 						childPlayerTerritories.add(adj);
@@ -65,7 +76,8 @@ public class GreedyAgent extends Player {
 						child.setOpponentTerritories(childOpponentTerritories);
 						Territory[] childTerr = cloneTerritories(terr);
 						childTerr[adj].setHolderID(super.getPlayerID());
-						childTerr[adj].setTroopsCount(terr[territory].getTroopsCount() - 1);
+						childTerr[adj]
+								.setTroopsCount(terr[territory].getTroopsCount() - terr[adj].getTroopsCount() - 1);
 						childTerr[territory].setTroopsCount(1);
 						child.setTerritories(childTerr);
 						child.calculateHeuristic();
