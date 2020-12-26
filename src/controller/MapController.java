@@ -227,6 +227,8 @@ public class MapController {
 		// Otherwise perform the attack and update
 		currentPlayer.getTerritories().add(to);
 		Game.getOtherPlayer().removeTerritory(to);
+		// set the owners
+		defendingTerr.setHolderID(currentPlayer.getPlayerID());
 		attackingTerr.setTroopsCount(1);
 		defendingTerr.setTroopsCount(attackingTroops - defendingTroops - 1);
 		GameConfig.updateTerritory(to, defendingTerr.getTroopsCount(), currentPlayer.getPlayerID());
