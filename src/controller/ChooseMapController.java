@@ -14,6 +14,14 @@ public class ChooseMapController {
 		ChangeScenesController.getInstance().goToEgypt(event);
 	}
 
+	// When USA's map is selected, GameMap: 1
+	@FXML
+	void goToUSA(ActionEvent event) throws IOException {
+		// Keep changes made
+		GameConfig.setGameMap(1);
+		ChangeScenesController.getInstance().goToUSA(event);
+	}
+
 	@FXML
 	void goToMainMenu(ActionEvent event) throws IOException {
 		ChangeScenesController.getInstance().goToMainMenu(event);

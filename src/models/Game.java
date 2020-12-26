@@ -235,6 +235,7 @@ public class Game {
 			territories[49].setAdjacentTerrs(new ArrayList<Integer>(List.of(3, 9)));
 			territories[50] = new Territory(50);
 			territories[50].setAdjacentTerrs(new ArrayList<Integer>(List.of(1)));
+			initializeTerritories(70);
 		}
 	}
 

@@ -47,6 +47,8 @@ public class MapController {
 	boolean distributing = false;
 	int distTroops = 0;
 	int distTerritory;
+	// To keep the total number of turns payed
+	int numberOfTurns = 1;
 
 	// The current Player
 	Player currentPlayer;
@@ -79,12 +81,12 @@ public class MapController {
 	// Function to change turns
 	@FXML
 	void changeTurn() {
-		attackableTerritories.clear();
 		// Check whether we reached the final state
 		if (Game.isFinalState()) {
-			currentActionLbl.setText("Player " + (currentPlayer.getPlayerID() + 1) + " won!");
+			currentActionLbl.setText("Player " + (currentPlayer.getPlayerID() + 1) + " won!" + " In " + numberOfTurns + " turns.");
 			return;
 		}
+		numberOfTurns++;
 		changePlayer();
 		startDist();
 		// If not human, perform the turn
@@ -99,7 +101,13 @@ public class MapController {
 
 	@FXML
 	void distribute(ActionEvent event) {
-		if (Integer.parseInt(armyNumberToAddSideBarTextField.getText()) > distTroops) {
+		try {
+			Integer.parseInt(armyNumberToAddSideBarTextField.getText());
+		}
+		catch (Exception e) {
+			return;
+		}
+		if (Integer.parseInt(armyNumberToAddSideBarTextField.getText()) > distTroops || Integer.parseInt(armyNumberToAddSideBarTextField.getText()) <=0) {
 			// Tried to distribute more than he has so reject
 			return;
 		}
@@ -152,6 +160,8 @@ public class MapController {
 		Game.changePlayer();
 		currentPlayer = Game.getCurrentPlayer();
 		playerNameLbl.setText("player " + (currentPlayer.getPlayerID() + 1));
+		attackingId = 0;
+		attackableTerritories.clear();
 	}
 
 	private void startDist() {
@@ -173,10 +183,10 @@ public class MapController {
 	}
 
 	private void showSideBar(int territoryId) {
-		String armyNumber = GameConfig.getArmyLabels().get(territoryId).getText();
+		String territoryNumber = "" + territoryId;
 		sideBar.setVisible(true);
 		armyNumberSideBarLabel.setVisible(true);
-		armyNumberSideBarLabel.setText("number " + armyNumber);
+		armyNumberSideBarLabel.setText("Number " + territoryNumber);
 		addArmySideBarButton.setVisible(true);
 		armyNumberToAddSideBarTextField.setVisible(true);
 	}
@@ -209,18 +219,20 @@ public class MapController {
 		Territory defendingTerr = Game.getTerritories()[to];
 		int attackingTroops = attackingTerr.getTroopsCount();
 		int defendingTroops = defendingTerr.getTroopsCount();
-		if (defendingTroops >= attackingTroops) {
+		if (defendingTroops >= attackingTroops - 1) {
 			// Cannot perform the attack
+			currentActionLbl.setText("can't perform the attack");
 			return;
 		}
 		// Otherwise perform the attack and update
 		currentPlayer.getTerritories().add(to);
 		Game.getOtherPlayer().removeTerritory(to);
 		attackingTerr.setTroopsCount(1);
-		defendingTerr.setTroopsCount(attackingTroops - 1);
-		defendingTerr.setHolderID(Game.getCurrentPlayerId());
+		defendingTerr.setTroopsCount(attackingTroops - defendingTroops - 1);
 		GameConfig.updateTerritory(to, defendingTerr.getTroopsCount(), currentPlayer.getPlayerID());
 		GameConfig.updateTerritory(from, attackingTerr.getTroopsCount(), currentPlayer.getPlayerID());
+		attackingId = 0;
+		attackableTerritories.clear();
 	}
 
 }

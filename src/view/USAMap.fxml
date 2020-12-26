@@ -1,8 +1,1234 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0"
+	prefWidth="1366.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.MapController">
+	<children>
+		<ImageView fitHeight="768.0" fitWidth="1366.0">
+			<image>
+				<Image url="@Assets/America/americaMap.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap1" layoutX="129.0" layoutY="132.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap1.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap2" fitHeight="138.0"
+			fitWidth="161.0" layoutX="95.0" layoutY="197.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap2.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap3" fitHeight="284.0"
+			fitWidth="162.0" layoutX="78.0" layoutY="304.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap3.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap4" fitHeight="194.0"
+			fitWidth="133.0" layoutX="154.0" layoutY="331.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap4.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap5" fitHeight="200.0"
+			fitWidth="125.0" layoutX="232.0" layoutY="159.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap5.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap6" fitHeight="130.0"
+			fitWidth="221.0" layoutX="289.0" layoutY="165.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap6.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap7" fitHeight="119.0"
+			fitWidth="151.0" layoutX="348.0" layoutY="285.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap7.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap8" fitHeight="143.0"
+			fitWidth="115.0" layoutX="269.0" layoutY="355.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap8.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap9" fitHeight="170.0"
+			fitWidth="140.0" layoutX="228.0" layoutY="484.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap9.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap10" layoutX="371.0" layoutY="400.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap10.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap11" fitHeight="150.0"
+			fitWidth="151.0" layoutX="352.0" layoutY="505.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap11.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap12" fitHeight="233.0"
+			fitWidth="302.0" layoutX="408.0" layoutY="536.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap12.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap13" fitHeight="92.0"
+			fitWidth="188.0" layoutX="503.0" layoutY="516.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap13.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap14" fitHeight="80.0"
+			fitWidth="160.0" layoutX="525.0" layoutY="438.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap14.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap15" fitHeight="86.0"
+			fitWidth="174.0" layoutX="490.0" layoutY="353.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap15.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap16" layoutX="499.0" layoutY="275.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap16.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap17" layoutX="502.0" layoutY="194.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap17.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap18" layoutX="636.0" layoutY="195.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap18.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap19" layoutX="647.0" layoutY="345.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap19.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap20" layoutX="663.0" layoutY="422.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap20.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap21" layoutX="687.0" layoutY="535.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap21.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap22" layoutX="701.0" layoutY="626.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap22.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap23" layoutX="760.0" layoutY="573.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap23.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap24" layoutX="831.0" layoutY="567.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap24.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap25" layoutX="854.0" layoutY="669.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap25.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap26" layoutX="889.0" layoutY="558.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap26.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap27" layoutX="941.0" layoutY="549.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap27.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap28" layoutX="919.0" layoutY="491.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap28.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap29" layoutX="942.0" layoutY="432.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap29.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap30" layoutX="945.0" layoutY="421.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap30.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap31" layoutX="788.0" layoutY="514.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap31.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap32" layoutX="805.0" layoutY="454.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap32.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap33" layoutX="754.0" layoutY="368.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap33.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap34" layoutX="720.0" layoutY="256.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap34.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap35" layoutX="827.0" layoutY="382.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap35.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap36" layoutX="840.0" layoutY="277.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap36.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap37" layoutX="886.0" layoutY="367.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap37.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap38" layoutX="977.0" layoutY="347.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap38.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap39" layoutX="989.0" layoutY="262.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap39.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap40" layoutX="1078.0"
+			layoutY="218.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap40.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap41" layoutX="1128.0"
+			layoutY="222.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap41.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap42" fitHeight="109.0"
+			fitWidth="68.0" layoutX="1143.0" layoutY="174.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap42.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap43" layoutX="1111.0"
+			layoutY="289.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap43.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap44" layoutX="1146.0"
+			layoutY="334.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap44.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap45" layoutX="1111.0"
+			layoutY="323.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap45.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap46" layoutX="1088.0"
+			layoutY="361.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap46.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap47" layoutX="1078.0"
+			layoutY="403.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap47.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap48" layoutX="1007.0"
+			layoutY="409.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap48.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap49" layoutX="20.0" layoutY="616.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap49.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="blueMap50" fitHeight="138.0"
+			fitWidth="252.0" layoutX="2.0" visible="false">
+			<image>
+				<Image url="@Assets/America/blue_maps/blueMap50.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap1" layoutX="129.0" layoutY="132.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap1.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap2" fitHeight="138.0"
+			fitWidth="161.0" layoutX="95.0" layoutY="197.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap2.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap3" fitHeight="284.0"
+			fitWidth="162.0" layoutX="78.0" layoutY="304.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap3.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap4" fitHeight="194.0"
+			fitWidth="133.0" layoutX="154.0" layoutY="331.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap4.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap5" fitHeight="200.0"
+			fitWidth="125.0" layoutX="232.0" layoutY="159.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap5.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap6" fitHeight="130.0"
+			fitWidth="221.0" layoutX="289.0" layoutY="165.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap6.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap7" fitHeight="119.0"
+			fitWidth="151.0" layoutX="348.0" layoutY="285.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap7.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap8" fitHeight="143.0"
+			fitWidth="115.0" layoutX="269.0" layoutY="355.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap8.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap9" fitHeight="170.0"
+			fitWidth="140.0" layoutX="228.0" layoutY="484.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap9.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap10" layoutX="371.0" layoutY="400.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap10.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap11" fitHeight="150.0"
+			fitWidth="151.0" layoutX="352.0" layoutY="505.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap11.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap12" fitHeight="233.0"
+			fitWidth="302.0" layoutX="408.0" layoutY="536.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap12.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap13" fitHeight="92.0"
+			fitWidth="188.0" layoutX="503.0" layoutY="516.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap13.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap14" fitHeight="80.0"
+			fitWidth="160.0" layoutX="525.0" layoutY="438.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap14.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap15" fitHeight="86.0"
+			fitWidth="174.0" layoutX="490.0" layoutY="353.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap15.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap16" layoutX="499.0" layoutY="275.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap16.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap17" layoutX="502.0" layoutY="194.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap17.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap18" layoutX="636.0" layoutY="195.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap18.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap19" layoutX="647.0" layoutY="345.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap19.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap20" layoutX="663.0" layoutY="422.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap20.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap21" layoutX="687.0" layoutY="535.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap21.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap22" layoutX="701.0" layoutY="626.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap22.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap23" layoutX="760.0" layoutY="573.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap23.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap24" layoutX="831.0" layoutY="567.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap24.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap25" layoutX="854.0" layoutY="669.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap25.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap26" layoutX="889.0" layoutY="558.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap26.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap27" layoutX="941.0" layoutY="549.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap27.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap28" layoutX="919.0" layoutY="491.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap28.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap29" layoutX="942.0" layoutY="432.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap29.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap30" layoutX="945.0" layoutY="421.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap30.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap31" layoutX="788.0" layoutY="514.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap31.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap32" layoutX="805.0" layoutY="454.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap32.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap33" layoutX="754.0" layoutY="368.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap33.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap34" layoutX="720.0" layoutY="256.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap34.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap35" layoutX="827.0" layoutY="382.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap35.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap36" layoutX="840.0" layoutY="277.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap36.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap37" layoutX="886.0" layoutY="367.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap37.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap38" layoutX="977.0" layoutY="347.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap38.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap39" layoutX="989.0" layoutY="262.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap39.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap40" layoutX="1078.0" layoutY="218.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap40.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap41" layoutX="1128.0" layoutY="222.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap41.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap42" fitHeight="109.0"
+			fitWidth="68.0" layoutX="1143.0" layoutY="174.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap42.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap43" layoutX="1111.0" layoutY="289.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap43.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap44" layoutX="1146.0" layoutY="334.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap44.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap45" layoutX="1111.0" layoutY="323.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap45.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap46" layoutX="1088.0" layoutY="361.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap46.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap47" layoutX="1078.0" layoutY="403.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap47.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap48" layoutX="1007.0" layoutY="409.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap48.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap49" layoutX="20.0" layoutY="616.0"
+			visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap49.png" />
+			</image>
+		</ImageView>
+		<ImageView fx:id="redMap50" fitHeight="138.0"
+			fitWidth="252.0" layoutX="2.0" visible="false">
+			<image>
+				<Image url="@Assets/America/red_maps/redMap50.png" />
+			</image>
+		</ImageView>
+		<Label fx:id="armyNumberLabel1" layoutX="185.0" layoutY="163.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel2" layoutX="162.0" layoutY="258.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel3" layoutX="105.0" layoutY="418.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel4" layoutX="197.0" layoutY="381.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel5" layoutX="258.0" layoutY="285.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel6" layoutX="368.0" layoutY="209.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel7" layoutX="392.0" layoutY="324.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel8" layoutX="303.0" layoutY="415.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel9" layoutX="267.0" layoutY="539.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel10" layoutX="428.0" layoutY="438.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel11" layoutX="405.0" layoutY="558.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel12" layoutX="553.0" layoutY="650.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel13" layoutX="597.0" layoutY="535.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel14" layoutX="582.0" layoutY="459.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel15" layoutX="559.0" layoutY="388.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel16" layoutX="553.0" layoutY="294.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel17" layoutX="542.0" layoutY="218.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel18" layoutX="660.0" layoutY="237.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel19" layoutX="681.0" layoutY="365.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel20" layoutX="703.0" layoutY="469.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel21" layoutX="711.0" layoutY="563.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel22" layoutX="710.0" layoutY="636.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel23" layoutX="774.0" layoutY="608.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel24" layoutX="848.0" layoutY="607.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel25" layoutX="962.0" layoutY="689.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel26" layoutX="929.0" layoutY="607.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel27" layoutX="979.0" layoutY="563.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel28" layoutX="1019.0"
+			layoutY="516.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel29" layoutX="1008.0"
+			layoutY="458.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel30" layoutX="962.0" layoutY="435.0"
+			prefHeight="26.0" prefWidth="32.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel31" layoutX="848.0" layoutY="530.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel32" layoutX="883.0" layoutY="479.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel33" layoutX="772.0" layoutY="411.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel34" layoutX="754.0" layoutY="295.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel35" layoutX="836.0" layoutY="420.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel36" layoutX="863.0" layoutY="329.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel37" layoutX="906.0" layoutY="400.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel38" layoutX="1008.0"
+			layoutY="368.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel39" layoutX="1056.0"
+			layoutY="304.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel40" layoutX="1087.0"
+			layoutY="224.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel41" layoutX="1130.0"
+			layoutY="284.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="15.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel42" layoutX="1156.0"
+			layoutY="211.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="22.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel43" layoutX="1162.0"
+			layoutY="299.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="15.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel44" layoutX="1172.0"
+			layoutY="346.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel45" layoutX="1133.0"
+			layoutY="331.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="15.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel46" layoutX="1100.0"
+			layoutY="380.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="19.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel47" layoutX="1103.0"
+			layoutY="437.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="15.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel48" layoutX="1053.0"
+			layoutY="414.0" text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="15.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel49" layoutX="58.0" layoutY="681.0"
+			text="0" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberLabel50" layoutX="105.0" text="0"
+			textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="27.0" />
+			</font>
+		</Label>
+		<Polygon fx:id="polyState1" fill="DODGERBLUE" layoutX="203.0"
+			layoutY="193.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="51.0, 40.0, 58.0, -34.0, 35.0, -49.0, -15.0, -55.0, -30.0, -55.0, -30.0, -10.0, -47.0, -16.0, -47.0, -40.0, -67.0, -49.0, -74.0, -1.0, -47.0, 22.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState2" fill="DODGERBLUE" layoutX="184.0"
+			layoutY="283.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="42.0, 48.0, 51.0, -11.0, 69.0, -27.0, 69.0, -42.0, 10.0, -55.0, -26.0, -55.0, -40.0, -61.0, -56.0, -83.0, -67.0, -49.0, -89.0, 14.0, -13.0, 39.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState3" fill="DODGERBLUE" layoutX="139.0"
+			layoutY="414.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="38.0, 165.0, 84.0, 173.0, 96.0, 131.0, 8.0, -11.0, 21.0, -85.0, -6.0, -95.0, -47.999969482421875, -107.0, -57.000030517578125, -70.0, -57.0, -19.0, -47.999969482421875, 19.0, -19.0, 103.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState4" fill="DODGERBLUE" layoutX="215.0"
+			layoutY="393.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-57.0, 9.0, 21.0, 129.0, 28.0, 110.0, 38.0, 103.0, 59.0, 32.0, 66.0, -40.0, -41.0, -62.0, -41.0, -53.0, -41.0, -40.0, -57.0, -4.0, -57.0, -4.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState5" fill="DODGERBLUE" layoutX="285.0"
+			layoutY="238.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="62.0, 121.0, 70.0, 65.0, 37.0, 53.0, 18.0, 20.0, 9.0, -25.0, -2.0, -76.0, -10.0, -76.0, -24.0, -40.0, -24.0, 20.0, -37.0, 38.0, -50.0, 96.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState6" fill="DODGERBLUE" layoutX="398.0"
+			layoutY="196.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="98.0, 100.0, 109.0, 1.0, -108.0, -31.0, -101.0, 9.0, -93.0, 20.0, -93.0, 53.0, -82.0, 53.0, -69.0, 92.0, -40.0, 100.0, -31.0, 84.0, -24.0, 84.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState7" fill="DODGERBLUE" layoutX="427.0"
+			layoutY="310.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="57.0, 92.0, 68.0, -7.0, -57.0, -21.0, -57.0, -21.0, -57.0, -21.0, -57.0, -21.0, -57.0, -21.0, -64.0, 29.0, -76.0, 76.0, -15.0, 85.0, -4.0, 85.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState8" fill="DODGERBLUE" layoutX="331.0"
+			layoutY="393.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-15.0, -27.0, -27.0, -33.0, -38.0, -33.0, -38.0, -33.0, -38.0, -33.0, -38.0, -33.0, -56.0, 84.0, 35.0, 105.0, 51.0, 8.0, 14.0, 0.0, 14.0, -27.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState9" fill="DODGERBLUE" layoutX="301.0"
+			layoutY="533.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-54.0, 21.0, -67.0, 42.0, -67.0, 71.0, -40.0, 91.0, -3.0, 108.0, 45.0, 116.0, 53.0, 42.0, 63.0, 0.0, 63.0, -27.0, -32.0, -45.0, -54.0, -6.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState10" fill="DODGERBLUE" layoutX="466.0"
+			layoutY="427.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-75.0, -27.0, -75.0, -27.0, -75.0, -27.0, -89.0, 71.0, 53.0, 83.0, 61.0, 0.0, 61.0, -16.0, 6.0, -16.0, -33.0, -16.0, -75.0, -27.0, -75.0, -27.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState11" fill="DODGERBLUE" layoutX="521.0"
+			layoutY="588.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-151.0, -84.0, -151.0, -43.0, -159.0, -16.0, -159.0, 25.0, -169.0, 63.0, -159.0, 63.0, -151.0, 53.0, -37.0, 53.0, -21.0, -67.0, -151.0, -84.0, -151.0, -84.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState12" fill="DODGERBLUE" layoutX="712.0"
+			layoutY="666.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-84.0, 102.0, -8.0, 51.0, -20.0, -49.0, -73.0, -49.0, -117.0, -60.0, -148.0, -78.0, -148.0, -128.0, -206.0, -128.0, -219.0, -13.0, -300.0, -19.0, -237.0, 60.0, -219.0, 45.0, -156.0, 102.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState13" fill="DODGERBLUE" layoutX="751.0"
+			layoutY="571.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-183.0, 10.0, -156.0, 29.0, -113.0, 35.0, -84.0, 29.0, -65.0, 35.0, -65.0, -21.0, -73.0, -49.0, -177.0, -49.0, -244.0, -49.0, -244.0, -42.0, -205.0, -42.0, -177.0, -33.0, -183.0, 10.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState14" fill="DODGERBLUE" layoutX="769.0"
+			layoutY="484.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-90.0, -21.0, -97.0, -35.0, -150.0, -42.0, -234.0, -42.0, -234.0, -42.0, -234.0, -42.0, -234.0, -42.0, -234.0, -42.0, -234.0, -21.0, -244.0, 29.0, -183.0, 29.0, -90.0, 29.0, -84.0, -14.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState15" fill="DODGERBLUE" layoutX="741.0"
+			layoutY="403.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-88.0, 13.0, -88.0, -7.0, -110.0, -35.0, -146.0, -42.0, -244.0, -49.0, -244.0, -19.0, -252.0, -1.0, -252.0, -1.0, -252.0, -1.0, -210.0, 6.0, -203.0, 13.0, -203.0, 31.0, -79.0, 31.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState16" fill="DODGERBLUE" layoutX="754.0"
+			layoutY="298.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-106.0, 43.0, -119.0, -7.0, -175.0, -18.0, -189.0, -18.0, -210.0, -18.0, -244.0, -18.0, -244.0, -18.0, -247.0, -2.0, -252.0, 52.0, -175.0, 52.0, -128.0, 61.0, -112.0, 69.0, -119.0, 52.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState17" fill="DODGERBLUE" layoutX="756.0"
+			layoutY="212.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-110.0, 46.0, -117.0, 26.0, -124.0, 7.0, -124.0, -6.0, -239.0, -18.0, -239.0, 18.0, -249.0, 40.0, -249.0, 58.0, -249.0, 58.0, -249.0, 58.0, -194.0, 69.0, -144.0, 58.0, -117.0, 69.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState18" fill="DODGERBLUE" layoutX="884.0"
+			layoutY="260.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-117.0, -34.0, -194.0, -45.0, -207.0, -65.0, -214.0, -57.0, -244.0, -57.0, -238.0, -22.5, -236.0, 20.0, -229.0, 37.0, -236.0, 85.0, -141.0, 78.0, -173.0, 45.0, -155.0, -3.0, -133.0, -24.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState19" fill="DODGERBLUE" layoutX="891.0"
+			layoutY="361.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-139.0, -3.0, -139.0, -16.0, -245.0, -10.0, -245.0, -10.0, -245.0, -10.0, -245.0, -10.0, -236.0, -3.0, -236.0, 17.0, -224.0, 55.0, -139.0, 55.0, -133.0, 38.0, -124.0, 27.0, -124.0, 11.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState20" fill="DODGERBLUE" layoutX="926.0"
+			layoutY="485.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-149.0, -3.0, -149.0, -9.0, -158.0, -16.0, -180.0, -39.0, -180.0, -58.0, -260.0, -58.0, -236.0, -3.0, -236.0, 17.0, -236.0, 17.0, -236.0, 45.0, -140.0, 45.0, -133.0, 55.0, -124.0, 38.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState21" fill="DODGERBLUE" layoutX="959.0"
+			layoutY="610.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-199.0, 10.0, -193.0, -15.0, -180.0, -43.0, -170.0, -60.0, -180.0, -68.0, -267.0, -68.0, -267.0, -68.0, -267.0, -50.0, -261.0, -33.0, -267.0, -15.0, -267.0, -3.0, -255.0, 10.0, -255.0, 17.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState22" fill="DODGERBLUE" layoutX="990.0"
+			layoutY="737.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-194.0, -56.0, -220.0, -50.0, -235.0, -56.0, -220.0, -86.0, -228.0, -108.0, -255.0, -108.0, -286.0, -99.0, -278.0, -56.0, -278.0, -20.0, -185.0, -10.0, -173.0, -26.0, -200.0, -44.0, -185.0, -44.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState23" fill="DODGERBLUE"
+			layoutX="1111.0" layoutY="685.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-298.0, 10.0, -275.0, 10.0, -284.0, -54.0, -284.0, -54.0, -284.0, -54.0, -284.0, -108.0, -322.0, -108.0, -340.0, -86.0, -340.0, -65.0, -334.0, -37.0, -348.0, -9.0, -334.0, -9.0, -305.0, -9.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState24" fill="DODGERBLUE"
+			layoutX="1179.0" layoutY="675.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-342.0, -63.0, -336.0, -86.0, -342.0, -101.0, -292.0, -101.0, -284.0, -75.0, -273.0, -45.0, -273.0, -23.0, -273.0, -5.0, -326.0, -5.0, -326.0, 18.0, -336.0, 18.0, -342.0, -14.0, -342.0, -45.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState25" fill="DODGERBLUE"
+			layoutX="1318.0" layoutY="773.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-423.0, -83.0, -459.0, -83.0, -459.0, -90.0, -405.0, -97.0, -395.0, -90.0, -336.0, -90.0, -326.0, -97.0, -269.0, -5.0, -326.0, -5.0, -336.0, -31.0, -347.0, -60.0, -383.0, -83.0, -411.0, -67.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState26" fill="DODGERBLUE"
+			layoutX="1297.0" layoutY="687.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-405.0, -121.0, -405.0, -121.0, -405.0, -121.0, -383.0, -121.0, -361.0, -121.0, -336.0, -94.0, -311.0, -75.0, -295.0, -51.0, -302.0, -23.0, -318.0, -13.0, -374.0, -13.0, -383.0, -29.0, -383.0, -69.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState27" fill="DODGERBLUE"
+			layoutX="1352.0" layoutY="655.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-405.0, -87.0, -405.0, -94.0, -361.0, -101.0, -329.0, -94.0, -310.0, -81.0, -310.0, -59.0, -342.0, -29.0, -354.0, -36.0, -361.0, -51.0, -374.0, -59.0, -384.0, -72.0, -390.0, -72.0, -396.0, -81.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState28" fill="DODGERBLUE"
+			layoutX="1389.0" layoutY="601.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-424.0, -72.0, -411.0, -88.0, -358.0, -95.0, -297.0, -107.0, -287.0, -81.0, -305.0, -72.0, -297.0, -59.0, -326.0, -30.0, -349.0, -42.0, -370.0, -49.0, -396.0, -59.0, -466.0, -42.0, -444.0, -59.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState29" fill="DODGERBLUE"
+			layoutX="1387.0" layoutY="547.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-362.0, -96.0, -362.0, -107.0, -349.0, -107.0, -339.0, -114.0, -339.0, -96.0, -313.0, -72.0, -297.0, -59.0, -412.0, -37.0, -441.0, -37.0, -433.0, -49.0, -412.0, -49.0, -389.0, -59.0, -377.0, -86.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState30" fill="DODGERBLUE"
+			layoutX="1302.0" layoutY="634.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-342.0, -191.0, -322.0, -204.0, -304.0, -204.0, -297.0, -197.0, -278.0, -204.0, -288.0, -191.0, -297.0, -181.0, -304.0, -159.0, -322.0, -150.0, -335.0, -141.0, -342.0, -150.0, -352.0, -159.0, -352.0, -168.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState31" fill="DODGERBLUE"
+			layoutX="1174.0" layoutY="722.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-371.0, -168.0, -371.0, -181.0, -352.0, -191.0, -322.0, -191.0, -208.0, -204.0, -243.0, -181.0, -268.0, -159.0, -288.0, -159.0, -322.0, -159.0, -339.0, -159.0, -352.0, -150.0, -371.0, -150.0, -382.0, -159.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState32" fill="DODGERBLUE"
+			layoutX="1187.0" layoutY="681.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-352.0, -181.0, -306.0, -199.0, -288.0, -223.0, -277.0, -216.0, -251.0, -216.0, -235.0, -190.0, -251.0, -167.0, -298.0, -159.0, -322.0, -159.0, -343.0, -159.0, -379.0, -151.0, -379.0, -159.0, -361.0, -167.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState33" fill="DODGERBLUE"
+			layoutX="1095.0" layoutY="615.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-322.0, -153.0, -335.0, -181.0, -322.0, -211.0, -315.0, -240.0, -274.0, -246.0, -266.0, -222.0, -266.0, -181.0, -260.0, -141.0, -274.0, -127.0, -274.0, -107.0, -293.0, -107.0, -306.0, -127.0, -306.0, -141.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState34" fill="DODGERBLUE"
+			layoutX="1074.0" layoutY="508.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-340.0, -201.0, -348.0, -222.0, -340.0, -240.0, -322.0, -251.0, -274.0, -240.0, -260.0, -211.0, -245.0, -201.0, -260.0, -153.0, -252.0, -141.0, -280.0, -141.0, -305.0, -141.0, -315.0, -153.0, -322.0, -173.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState35" fill="DODGERBLUE"
+			layoutX="1156.0" layoutY="634.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-315.0, -184.0, -315.0, -211.0, -322.0, -233.0, -315.0, -240.0, -274.0, -251.0, -274.0, -233.0, -267.0, -217.0, -267.0, -201.0, -267.0, -184.0, -274.0, -165.0, -293.0, -153.0, -328.0, -141.0, -315.0, -165.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState36" fill="DODGERBLUE"
+			layoutX="1179.0" layoutY="540.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-337.0, -209.0, -328.0, -233.0, -315.0, -251.0, -301.0, -264.0, -274.0, -251.0, -274.0, -233.0, -284.0, -215.0, -259.0, -222.0, -259.0, -190.0, -267.0, -164.0, -328.0, -157.0, -315.0, -173.0, -328.0, -190.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState37" fill="DODGERBLUE"
+			layoutX="1239.0" layoutY="632.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-347.0, -244.0, -328.0, -251.0, -315.0, -244.0, -298.0, -244.0, -267.0, -264.0, -267.0, -234.0, -267.0, -219.0, -274.0, -206.0, -298.0, -173.0, -305.0, -173.0, -315.0, -173.0, -328.0, -181.0, -341.0, -181.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState38" fill="DODGERBLUE"
+			layoutX="1344.0" layoutY="606.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-365.0, -219.0, -365.0, -244.0, -328.0, -244.0, -298.0, -251.0, -274.0, -251.0, -258.0, -244.0, -258.0, -225.0, -252.0, -219.0, -258.0, -210.0, -274.0, -203.0, -298.0, -196.0, -328.0, -187.0, -358.0, -187.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState39" fill="DODGERBLUE"
+			layoutX="1367.0" layoutY="542.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-311.0, -235.0, -321.0, -244.0, -298.0, -277.0, -287.0, -277.0, -274.0, -271.0, -265.0, -244.0, -258.0, -195.0, -258.0, -182.0, -298.0, -203.0, -382.0, -182.0, -361.0, -203.0, -371.0, -219.0, -349.0, -219.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState40" fill="DODGERBLUE"
+			layoutX="1422.0" layoutY="495.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-337.0, -244.0, -343.0, -271.0, -329.0, -277.0, -298.0, -271.0, -298.0, -244.0, -298.0, -219.0, -298.0, -189.0, -311.0, -182.0, -311.0, -196.0, -311.0, -213.0, -311.0, -213.0, -321.0, -219.0, -321.0, -230.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState41" fill="DODGERBLUE"
+			layoutX="1498.0" layoutY="492.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-369.0, -253.0, -369.0, -271.0, -360.0, -271.0, -360.0, -271.0, -360.0, -271.0, -360.0, -259.0, -360.0, -244.0, -350.0, -213.0, -337.0, -202.0, -344.0, -189.0, -369.0, -183.0, -369.0, -213.0, -369.0, -231.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState42" fill="DODGERBLUE"
+			layoutX="1564.0" layoutY="436.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-418.0, -244.0, -406.0, -244.0, -406.0, -253.0, -389.0, -259.0, -373.0, -253.0, -373.0, -232.0, -352.0, -213.0, -352.0, -196.0, -373.0, -182.0, -396.0, -151.0, -406.0, -162.0, -418.0, -189.0, -418.0, -213.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState43" fill="DODGERBLUE"
+			layoutX="1422.0" layoutY="659.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-307.0, -324.0, -307.0, -345.0, -279.0, -345.0, -265.0, -352.0, -257.0, -362.0, -238.0, -371.0, -227.0, -352.0, -227.0, -334.0, -220.0, -324.0, -227.0, -324.0, -249.0, -334.0, -257.0, -345.0, -279.0, -334.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState44" fill="DODGERBLUE"
+			layoutX="1466.0" layoutY="785.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-316.0, -423.0, -292.0, -431.0, -292.0, -444.0, -279.0, -444.0, -272.0, -437.0, -265.0, -444.0, -257.0, -437.0, -257.0, -416.0, -265.0, -403.0, -279.0, -403.0, -292.0, -403.0, -301.0, -397.0, -316.0, -403.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState45" fill="DODGERBLUE"
+			layoutX="1476.0" layoutY="795.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-362.0, -458.0, -341.0, -458.0, -329.0, -465.0, -316.0, -471.0, -307.0, -458.0, -307.0, -447.0, -316.0, -447.0, -316.0, -441.0, -329.0, -441.0, -341.0, -441.0, -341.0, -441.0, -355.0, -432.0, -355.0, -441.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState46" fill="DODGERBLUE"
+			layoutX="1486.0" layoutY="805.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-396.0, -441.0, -384.0, -441.0, -376.0, -434.0, -364.0, -434.0, -350.0, -424.0, -350.0, -401.0, -357.0, -391.0, -364.0, -379.0, -384.0, -379.0, -396.0, -391.0, -396.0, -401.0, -384.0, -411.0, -396.0, -424.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState47" fill="DODGERBLUE"
+			layoutX="1582.0" layoutY="848.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-491.0, -434.0, -491.0, -426.0, -477.0, -417.0, -457.0, -417.0, -449.0, -407.0, -449.0, -389.0, -457.0, -372.0, -469.0, -379.0, -477.0, -401.0, -491.0, -407.0, -491.0, -417.0, -500.0, -434.0, -500.0, -441.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState48" fill="DODGERBLUE"
+			layoutX="1702.0" layoutY="932.0" onMouseClicked="#onStatePress"
+			opacity="0.0"
+			points="-694.0, -510.0, -671.0, -510.0, -647.0, -516.0, -628.0, -522.0, -614.0, -488.0, -600.0, -482.0, -590.0, -461.0, -614.0, -455.0, -647.0, -488.0, -647.0, -504.0, -664.0, -504.0, -671.0, -510.0, -694.0, -504.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState49" fill="DODGERBLUE" layoutX="724.0"
+			layoutY="1144.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-710.0, -510.0, -691.0, -530.0, -647.0, -530.0, -647.0, -510.0, -585.0, -491.0, -541.0, -459.0, -516.0, -390.0, -541.0, -376.0, -563.0, -376.0, -563.0, -397.0, -600.0, -432.0, -614.0, -459.0, -657.0, -482.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Polygon fx:id="polyState50" fill="DODGERBLUE" layoutX="730.0"
+			layoutY="514.0" onMouseClicked="#onStatePress" opacity="0.0"
+			points="-630.0, -432.0, -676.0, -459.0, -683.0, -514.0, -563.0, -514.0, -544.0, -469.0, -516.0, -469.0, -476.0, -440.0, -486.0, -425.0, -516.0, -440.0, -563.0, -459.0, -592.0, -451.0, -676.0, -376.0, -728.0, -376.0"
+			stroke="BLACK" strokeType="INSIDE" />
+		<Rectangle fx:id="sideBar" arcHeight="5.0" arcWidth="5.0"
+			fill="#0a000d" height="768.0" layoutX="1233.0" stroke="BLACK"
+			strokeType="INSIDE" visible="false" width="133.0" />
+		<Label fx:id="stateNumberSideBarLabel" layoutX="1243.0"
+			layoutY="20.0" prefHeight="28.0" prefWidth="113.0" text="State 25"
+			textFill="#d4eb0b" visible="false">
+			<font>
+				<Font size="28.0" />
+			</font>
+		</Label>
+		<Label fx:id="armyNumberSideBarLabel" layoutX="1243.0"
+			layoutY="62.0" prefHeight="28.0" prefWidth="113.0" text="25 soldier"
+			textFill="#f8f8f6" visible="false">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Label>
+		<Button fx:id="attackSideBarButton" layoutX="1259.0"
+			layoutY="363.0" mnemonicParsing="false" prefHeight="43.0"
+			prefWidth="82.0" text="Attack" visible="false">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<Button fx:id="addArmySideBarButton" layoutX="1259.0"
+			layoutY="197.0" mnemonicParsing="false" onAction="#distribute"
+			prefHeight="30.0" prefWidth="82.0" text="Add Army" visible="false">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<TextField fx:id="armyNumberToAddSideBarTextField"
+			layoutX="1239.0" layoutY="158.0" prefHeight="20.0" prefWidth="122.0"
+			visible="false" />
+		<Label layoutX="1244.0" layoutY="125.0" prefHeight="28.0"
+			prefWidth="113.0" text="insert army number" textFill="#d4eb0b"
+			visible="false" />
+		<ChoiceBox fx:id="adjacentStatesSideBarChoiceBox"
+			layoutX="1243.0" layoutY="323.0" prefHeight="26.0" prefWidth="113.0"
+			visible="false" />
+		<Label layoutX="1255.0" layoutY="282.0" prefHeight="28.0"
+			prefWidth="113.0" text="choose state to" textFill="#d4eb0b"
+			visible="false" />
+		<Label layoutX="1280.0" layoutY="296.0" prefHeight="28.0"
+			prefWidth="113.0" text="attack" textFill="#d4eb0b" visible="false" />
+		<Label fx:id="playerNameLbl" layoutX="314.0" layoutY="107.0"
+			textFill="#4a440b">
+			<font>
+				<Font name="Arial" size="22.0" />
+			</font>
+		</Label>
+		<Label fx:id="currentActionLbl" layoutX="314.0" layoutY="70.0"
+			textFill="#4a440b">
+			<font>
+				<Font size="22.0" />
+			</font>
+		</Label>
+		<Button fx:id="nextTurnBtn" layoutX="314.0" layoutY="40.0"
+			mnemonicParsing="false" onAction="#changeTurn" prefHeight="25.0"
+			prefWidth="122.0" style="-fx-background-color: black;"
+			text="Finish turn" textFill="#f5f4f4" visible="false">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Button>
+		<Button layoutX="436.0" layoutY="40.0" mnemonicParsing="false"
+			onAction="#start" prefHeight="25.0" prefWidth="122.0"
+			style="-fx-background-color: orange;" text="Start">
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<font>
+				<Font name="System Bold" size="16.0" />
+			</font>
+		</Button>
+	</children>
 </AnchorPane>
-
