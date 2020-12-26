@@ -26,607 +26,607 @@
 	<children>
 		<ImageView fitHeight="768.0" fitWidth="1366.0">
 			<image>
-				<Image url="@Assets/America/americaMap.png" />
+				<Image url="@assets/America/americaMap.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap1" layoutX="129.0" layoutY="132.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap1.png" />
+				<Image url="@assets/America/blue_maps/blueMap1.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap2" fitHeight="138.0"
 			fitWidth="161.0" layoutX="95.0" layoutY="197.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap2.png" />
+				<Image url="@assets/America/blue_maps/blueMap2.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap3" fitHeight="284.0"
 			fitWidth="162.0" layoutX="78.0" layoutY="304.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap3.png" />
+				<Image url="@assets/America/blue_maps/blueMap3.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap4" fitHeight="194.0"
 			fitWidth="133.0" layoutX="154.0" layoutY="331.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap4.png" />
+				<Image url="@assets/America/blue_maps/blueMap4.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap5" fitHeight="200.0"
 			fitWidth="125.0" layoutX="232.0" layoutY="159.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap5.png" />
+				<Image url="@assets/America/blue_maps/blueMap5.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap6" fitHeight="130.0"
 			fitWidth="221.0" layoutX="289.0" layoutY="165.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap6.png" />
+				<Image url="@assets/America/blue_maps/blueMap6.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap7" fitHeight="119.0"
 			fitWidth="151.0" layoutX="348.0" layoutY="285.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap7.png" />
+				<Image url="@assets/America/blue_maps/blueMap7.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap8" fitHeight="143.0"
 			fitWidth="115.0" layoutX="269.0" layoutY="355.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap8.png" />
+				<Image url="@assets/America/blue_maps/blueMap8.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap9" fitHeight="170.0"
 			fitWidth="140.0" layoutX="228.0" layoutY="484.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap9.png" />
+				<Image url="@assets/America/blue_maps/blueMap9.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap10" layoutX="371.0" layoutY="400.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap10.png" />
+				<Image url="@assets/America/blue_maps/blueMap10.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap11" fitHeight="150.0"
 			fitWidth="151.0" layoutX="352.0" layoutY="505.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap11.png" />
+				<Image url="@assets/America/blue_maps/blueMap11.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap12" fitHeight="233.0"
 			fitWidth="302.0" layoutX="408.0" layoutY="536.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap12.png" />
+				<Image url="@assets/America/blue_maps/blueMap12.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap13" fitHeight="92.0"
 			fitWidth="188.0" layoutX="503.0" layoutY="516.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap13.png" />
+				<Image url="@assets/America/blue_maps/blueMap13.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap14" fitHeight="80.0"
 			fitWidth="160.0" layoutX="525.0" layoutY="438.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap14.png" />
+				<Image url="@assets/America/blue_maps/blueMap14.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap15" fitHeight="86.0"
 			fitWidth="174.0" layoutX="490.0" layoutY="353.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap15.png" />
+				<Image url="@assets/America/blue_maps/blueMap15.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap16" layoutX="499.0" layoutY="275.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap16.png" />
+				<Image url="@assets/America/blue_maps/blueMap16.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap17" layoutX="502.0" layoutY="194.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap17.png" />
+				<Image url="@assets/America/blue_maps/blueMap17.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap18" layoutX="636.0" layoutY="195.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap18.png" />
+				<Image url="@assets/America/blue_maps/blueMap18.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap19" layoutX="647.0" layoutY="345.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap19.png" />
+				<Image url="@assets/America/blue_maps/blueMap19.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap20" layoutX="663.0" layoutY="422.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap20.png" />
+				<Image url="@assets/America/blue_maps/blueMap20.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap21" layoutX="687.0" layoutY="535.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap21.png" />
+				<Image url="@assets/America/blue_maps/blueMap21.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap22" layoutX="701.0" layoutY="626.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap22.png" />
+				<Image url="@assets/America/blue_maps/blueMap22.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap23" layoutX="760.0" layoutY="573.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap23.png" />
+				<Image url="@assets/America/blue_maps/blueMap23.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap24" layoutX="831.0" layoutY="567.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap24.png" />
+				<Image url="@assets/America/blue_maps/blueMap24.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap25" layoutX="854.0" layoutY="669.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap25.png" />
+				<Image url="@assets/America/blue_maps/blueMap25.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap26" layoutX="889.0" layoutY="558.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap26.png" />
+				<Image url="@assets/America/blue_maps/blueMap26.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap27" layoutX="941.0" layoutY="549.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap27.png" />
+				<Image url="@assets/America/blue_maps/blueMap27.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap28" layoutX="919.0" layoutY="491.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap28.png" />
+				<Image url="@assets/America/blue_maps/blueMap28.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap29" layoutX="942.0" layoutY="432.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap29.png" />
+				<Image url="@assets/America/blue_maps/blueMap29.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap30" layoutX="945.0" layoutY="421.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap30.png" />
+				<Image url="@assets/America/blue_maps/blueMap30.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap31" layoutX="788.0" layoutY="514.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap31.png" />
+				<Image url="@assets/America/blue_maps/blueMap31.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap32" layoutX="805.0" layoutY="454.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap32.png" />
+				<Image url="@assets/America/blue_maps/blueMap32.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap33" layoutX="754.0" layoutY="368.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap33.png" />
+				<Image url="@assets/America/blue_maps/blueMap33.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap34" layoutX="720.0" layoutY="256.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap34.png" />
+				<Image url="@assets/America/blue_maps/blueMap34.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap35" layoutX="827.0" layoutY="382.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap35.png" />
+				<Image url="@assets/America/blue_maps/blueMap35.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap36" layoutX="840.0" layoutY="277.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap36.png" />
+				<Image url="@assets/America/blue_maps/blueMap36.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap37" layoutX="886.0" layoutY="367.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap37.png" />
+				<Image url="@assets/America/blue_maps/blueMap37.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap38" layoutX="977.0" layoutY="347.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap38.png" />
+				<Image url="@assets/America/blue_maps/blueMap38.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap39" layoutX="989.0" layoutY="262.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap39.png" />
+				<Image url="@assets/America/blue_maps/blueMap39.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap40" layoutX="1078.0"
 			layoutY="218.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap40.png" />
+				<Image url="@assets/America/blue_maps/blueMap40.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap41" layoutX="1128.0"
 			layoutY="222.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap41.png" />
+				<Image url="@assets/America/blue_maps/blueMap41.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap42" fitHeight="109.0"
 			fitWidth="68.0" layoutX="1143.0" layoutY="174.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap42.png" />
+				<Image url="@assets/America/blue_maps/blueMap42.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap43" layoutX="1111.0"
 			layoutY="289.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap43.png" />
+				<Image url="@assets/America/blue_maps/blueMap43.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap44" layoutX="1146.0"
 			layoutY="334.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap44.png" />
+				<Image url="@assets/America/blue_maps/blueMap44.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap45" layoutX="1111.0"
 			layoutY="323.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap45.png" />
+				<Image url="@assets/America/blue_maps/blueMap45.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap46" layoutX="1088.0"
 			layoutY="361.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap46.png" />
+				<Image url="@assets/America/blue_maps/blueMap46.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap47" layoutX="1078.0"
 			layoutY="403.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap47.png" />
+				<Image url="@assets/America/blue_maps/blueMap47.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap48" layoutX="1007.0"
 			layoutY="409.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap48.png" />
+				<Image url="@assets/America/blue_maps/blueMap48.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap49" layoutX="20.0" layoutY="616.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap49.png" />
+				<Image url="@assets/America/blue_maps/blueMap49.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="blueMap50" fitHeight="138.0"
 			fitWidth="252.0" layoutX="2.0" visible="false">
 			<image>
-				<Image url="@Assets/America/blue_maps/blueMap50.png" />
+				<Image url="@assets/America/blue_maps/blueMap50.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap1" layoutX="129.0" layoutY="132.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap1.png" />
+				<Image url="@assets/America/red_maps/redMap1.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap2" fitHeight="138.0"
 			fitWidth="161.0" layoutX="95.0" layoutY="197.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap2.png" />
+				<Image url="@assets/America/red_maps/redMap2.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap3" fitHeight="284.0"
 			fitWidth="162.0" layoutX="78.0" layoutY="304.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap3.png" />
+				<Image url="@assets/America/red_maps/redMap3.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap4" fitHeight="194.0"
 			fitWidth="133.0" layoutX="154.0" layoutY="331.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap4.png" />
+				<Image url="@assets/America/red_maps/redMap4.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap5" fitHeight="200.0"
 			fitWidth="125.0" layoutX="232.0" layoutY="159.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap5.png" />
+				<Image url="@assets/America/red_maps/redMap5.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap6" fitHeight="130.0"
 			fitWidth="221.0" layoutX="289.0" layoutY="165.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap6.png" />
+				<Image url="@assets/America/red_maps/redMap6.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap7" fitHeight="119.0"
 			fitWidth="151.0" layoutX="348.0" layoutY="285.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap7.png" />
+				<Image url="@assets/America/red_maps/redMap7.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap8" fitHeight="143.0"
 			fitWidth="115.0" layoutX="269.0" layoutY="355.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap8.png" />
+				<Image url="@assets/America/red_maps/redMap8.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap9" fitHeight="170.0"
 			fitWidth="140.0" layoutX="228.0" layoutY="484.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap9.png" />
+				<Image url="@assets/America/red_maps/redMap9.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap10" layoutX="371.0" layoutY="400.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap10.png" />
+				<Image url="@assets/America/red_maps/redMap10.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap11" fitHeight="150.0"
 			fitWidth="151.0" layoutX="352.0" layoutY="505.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap11.png" />
+				<Image url="@assets/America/red_maps/redMap11.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap12" fitHeight="233.0"
 			fitWidth="302.0" layoutX="408.0" layoutY="536.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap12.png" />
+				<Image url="@assets/America/red_maps/redMap12.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap13" fitHeight="92.0"
 			fitWidth="188.0" layoutX="503.0" layoutY="516.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap13.png" />
+				<Image url="@assets/America/red_maps/redMap13.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap14" fitHeight="80.0"
 			fitWidth="160.0" layoutX="525.0" layoutY="438.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap14.png" />
+				<Image url="@assets/America/red_maps/redMap14.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap15" fitHeight="86.0"
 			fitWidth="174.0" layoutX="490.0" layoutY="353.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap15.png" />
+				<Image url="@assets/America/red_maps/redMap15.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap16" layoutX="499.0" layoutY="275.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap16.png" />
+				<Image url="@assets/America/red_maps/redMap16.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap17" layoutX="502.0" layoutY="194.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap17.png" />
+				<Image url="@assets/America/red_maps/redMap17.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap18" layoutX="636.0" layoutY="195.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap18.png" />
+				<Image url="@assets/America/red_maps/redMap18.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap19" layoutX="647.0" layoutY="345.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap19.png" />
+				<Image url="@assets/America/red_maps/redMap19.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap20" layoutX="663.0" layoutY="422.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap20.png" />
+				<Image url="@assets/America/red_maps/redMap20.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap21" layoutX="687.0" layoutY="535.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap21.png" />
+				<Image url="@assets/America/red_maps/redMap21.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap22" layoutX="701.0" layoutY="626.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap22.png" />
+				<Image url="@assets/America/red_maps/redMap22.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap23" layoutX="760.0" layoutY="573.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap23.png" />
+				<Image url="@assets/America/red_maps/redMap23.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap24" layoutX="831.0" layoutY="567.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap24.png" />
+				<Image url="@assets/America/red_maps/redMap24.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap25" layoutX="854.0" layoutY="669.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap25.png" />
+				<Image url="@assets/America/red_maps/redMap25.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap26" layoutX="889.0" layoutY="558.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap26.png" />
+				<Image url="@assets/America/red_maps/redMap26.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap27" layoutX="941.0" layoutY="549.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap27.png" />
+				<Image url="@assets/America/red_maps/redMap27.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap28" layoutX="919.0" layoutY="491.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap28.png" />
+				<Image url="@assets/America/red_maps/redMap28.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap29" layoutX="942.0" layoutY="432.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap29.png" />
+				<Image url="@assets/America/red_maps/redMap29.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap30" layoutX="945.0" layoutY="421.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap30.png" />
+				<Image url="@assets/America/red_maps/redMap30.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap31" layoutX="788.0" layoutY="514.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap31.png" />
+				<Image url="@assets/America/red_maps/redMap31.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap32" layoutX="805.0" layoutY="454.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap32.png" />
+				<Image url="@assets/America/red_maps/redMap32.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap33" layoutX="754.0" layoutY="368.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap33.png" />
+				<Image url="@assets/America/red_maps/redMap33.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap34" layoutX="720.0" layoutY="256.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap34.png" />
+				<Image url="@assets/America/red_maps/redMap34.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap35" layoutX="827.0" layoutY="382.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap35.png" />
+				<Image url="@assets/America/red_maps/redMap35.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap36" layoutX="840.0" layoutY="277.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap36.png" />
+				<Image url="@assets/America/red_maps/redMap36.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap37" layoutX="886.0" layoutY="367.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap37.png" />
+				<Image url="@assets/America/red_maps/redMap37.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap38" layoutX="977.0" layoutY="347.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap38.png" />
+				<Image url="@assets/America/red_maps/redMap38.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap39" layoutX="989.0" layoutY="262.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap39.png" />
+				<Image url="@assets/America/red_maps/redMap39.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap40" layoutX="1078.0" layoutY="218.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap40.png" />
+				<Image url="@assets/America/red_maps/redMap40.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap41" layoutX="1128.0" layoutY="222.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap41.png" />
+				<Image url="@assets/America/red_maps/redMap41.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap42" fitHeight="109.0"
 			fitWidth="68.0" layoutX="1143.0" layoutY="174.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap42.png" />
+				<Image url="@assets/America/red_maps/redMap42.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap43" layoutX="1111.0" layoutY="289.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap43.png" />
+				<Image url="@assets/America/red_maps/redMap43.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap44" layoutX="1146.0" layoutY="334.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap44.png" />
+				<Image url="@assets/America/red_maps/redMap44.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap45" layoutX="1111.0" layoutY="323.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap45.png" />
+				<Image url="@assets/America/red_maps/redMap45.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap46" layoutX="1088.0" layoutY="361.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap46.png" />
+				<Image url="@assets/America/red_maps/redMap46.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap47" layoutX="1078.0" layoutY="403.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap47.png" />
+				<Image url="@assets/America/red_maps/redMap47.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap48" layoutX="1007.0" layoutY="409.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap48.png" />
+				<Image url="@assets/America/red_maps/redMap48.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap49" layoutX="20.0" layoutY="616.0"
 			visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap49.png" />
+				<Image url="@assets/America/red_maps/redMap49.png" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="redMap50" fitHeight="138.0"
 			fitWidth="252.0" layoutX="2.0" visible="false">
 			<image>
-				<Image url="@Assets/America/red_maps/redMap50.png" />
+				<Image url="@assets/America/red_maps/redMap50.png" />
 			</image>
 		</ImageView>
 		<Label fx:id="armyNumberLabel1" layoutX="185.0" layoutY="163.0"
