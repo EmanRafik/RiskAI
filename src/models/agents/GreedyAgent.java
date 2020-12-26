@@ -37,17 +37,10 @@ public class GreedyAgent extends Player {
 		current.calculateHeuristic();
 
 		addChildren(current);
-		int i = 0;
 		while (searchHeap.size() > 0) {
 			if (searchHeap.peek().compareTo(current) > 0) {
-				System.out.println("====> "+i);
 				break;
 			}
-			else
-			{
-				System.out.println("complete");
-			}
-			i++;
 			current = searchHeap.peek();
 			searchHeap.clear();
 			addChildren(current);
