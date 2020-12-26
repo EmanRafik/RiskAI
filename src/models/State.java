@@ -134,7 +134,7 @@ public class State implements Comparable<State>{
 		Collections.sort(arr, Comparator.comparingDouble(value -> value.x));
 		Collections.reverse(arr);
 		
-		List<Pair> weakestTerr = arr.subList(0, Math.min(3, arr.size()));
+		List<Pair> weakestTerr = arr.subList(0, Math.min(2, arr.size()));
 		if (weakestTerr.size() == 0) return;
 		int idx = 0;
 		while (bonusArmy > 0) {
