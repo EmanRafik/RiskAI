@@ -68,6 +68,7 @@ public abstract class Player {
 		ArrayList<Double> borderSecurityRatio = new ArrayList<Double>();
 		ArrayList<Pair> arr = new ArrayList<Pair>();
 		for (Integer curTerr : this.getTerritories()) {
+			if (Game.getTerritories()[curTerr].getTroopsCount() == 0) continue;
 			double curBSR = 0.0;
 			for (Integer oppTerr : Game.getTerritories()[curTerr].getAdjacentTerrs()) {
 				if (Game.getTerritories()[oppTerr].getHolderID() == this.getPlayerID()) continue;

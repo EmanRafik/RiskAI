@@ -120,6 +120,7 @@ public class State implements Comparable<State>{
 		ArrayList<Double> borderSecurityRatio = new ArrayList<Double>();
 		ArrayList<Pair> arr = new ArrayList<Pair>();
 		for (Integer curTerr : playerTerritories) {
+			if (territories[curTerr].getTroopsCount() == 0) continue;
 			double curBSR = 0.0;
 			for (Integer oppTerr : territories[curTerr].getAdjacentTerrs()) {
 				if (playerTerritories.contains(oppTerr)) continue;
@@ -129,12 +130,10 @@ public class State implements Comparable<State>{
 			borderSecurityRatio.add(curBSR);
 			arr.add(new Pair(curBSR, curTerr));
 		}
-		Collections.sort(arr, new Comparator<Pair>() { 
-            @Override
-            public int compare(Pair p1, Pair p2) { 
-                return (int) (p2.x - p1.x);
-            }
-		});
+		
+		Collections.sort(arr, Comparator.comparingDouble(value -> value.x));
+		Collections.reverse(arr);
+		
 		List<Pair> weakestTerr = arr.subList(0, Math.min(3, arr.size()));
 		if (weakestTerr.size() == 0) return;
 		int idx = 0;
