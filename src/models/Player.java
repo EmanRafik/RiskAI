@@ -77,13 +77,10 @@ public abstract class Player {
 			borderSecurityRatio.add(curBSR);
 			arr.add(new Pair(curBSR, curTerr));
 		}
-		Collections.sort(arr, new Comparator<Pair>() { 
-            @Override
-            public int compare(Pair p1, Pair p2) { 
-                return (int) (p2.x - p1.x);
-            }
-		});
-		List<Pair> weakestTerr = arr.subList(0, Math.min(3, arr.size()));
+		Collections.sort(arr, Comparator.comparingDouble(value -> value.x));
+		Collections.reverse(arr);
+		
+		List<Pair> weakestTerr = arr.subList(0, Math.min(2, arr.size()));
 		int idx = 0;
 		while (bonusArmy > 0) {
 			Game.getTerritories()[weakestTerr.get(idx).y].setTroopsCount(Game.getTerritories()[weakestTerr.get(idx).y].getTroopsCount() + 1);

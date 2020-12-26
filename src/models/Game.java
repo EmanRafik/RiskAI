@@ -79,7 +79,7 @@ public class Game {
 			territories[2] = new Territory(2);
 			territories[2].setAdjacentTerrs(new ArrayList<Integer>(List.of(1, 3)));
 			territories[3] = new Territory(3);
-			territories[3].setAdjacentTerrs(new ArrayList<Integer>(List.of(1, 24, 9, 10, 14)));
+			territories[3].setAdjacentTerrs(new ArrayList<Integer>(List.of(1, 2, 4, 9, 10, 14)));
 			territories[4] = new Territory(4);
 			territories[4].setAdjacentTerrs(new ArrayList<Integer>(List.of(3, 5, 9, 10)));
 			territories[5] = new Territory(5);

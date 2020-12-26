@@ -57,10 +57,36 @@ public class State implements Comparable<State>{
 	}
 
 	public void calculateHeuristic() {
-		for (Integer terr: opponentTerritories) {
-			for(Integer adj : territories[terr].getAdjacentTerrs()) {
-				if (territories[adj].getHolderID() == Game.getCurrentPlayerId()) {
-					heuristic += territories[terr].getTroopsCount();
+//		for (Integer terr: opponentTerritories) {
+//			for(Integer adj : territories[terr].getAdjacentTerrs()) {
+//				if (territories[adj].getHolderID() == Game.getCurrentPlayerId()) {
+//					heuristic += territories[terr].getTroopsCount();
+//				}
+//			}
+//		}
+		heuristic = 0;
+		//add number of undefended territories
+		for (Integer territory : playerTerritories) {
+			for (Integer adj : territories[territory].adjacentTerrs) {
+				if (territories[adj].getHolderID() != Game.getCurrentPlayerId() 
+						&& territories[adj].getTroopsCount() > territories[territory].getTroopsCount() + 1) {
+					heuristic++;
+					break;
+				}
+			}
+		}
+		
+		//subtract number of bonus troops in next step
+		heuristic -= Math.max(3, playerTerritories.size() / 3);
+		
+		heuristic += opponentTerritories.size();
+		
+		//subtract number of territories that the player can attack
+		for (Integer territory : opponentTerritories) {
+			for (Integer adj : territories[territory].adjacentTerrs) {
+				if (territories[adj].getHolderID() == Game.getCurrentPlayerId() 
+						&& territories[adj].getTroopsCount() > territories[territory].getTroopsCount() + 1) {
+					heuristic--;
 				}
 			}
 		}
@@ -69,7 +95,13 @@ public class State implements Comparable<State>{
 	@Override
 	public int compareTo(State s) {
 		// TODO Auto-generated method stub
-		return (this.getHeuristic() + this.getCost()) - (s.getHeuristic() + s.getCost());
+		if ((this.getHeuristic() + this.getCost()) > (s.getHeuristic() + s.getCost()))
+			return 1;
+		if ((this.getHeuristic() + this.getCost()) == (s.getHeuristic() + s.getCost()))
+			return 0;
+		if ((this.getHeuristic() + this.getCost()) < (s.getHeuristic() + s.getCost()))
+			return -1;
+		return 0;
 	}
 	
 	public boolean isTerminalState() {
