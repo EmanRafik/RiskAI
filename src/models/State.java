@@ -134,14 +134,13 @@ public class State implements Comparable<State>{
 	public int compareTo(State s) {
 
 		// TODO Auto-generated method stub
-		/*if ((this.getHeuristic() + this.getCost()) > (s.getHeuristic() + s.getCost()))
+		if ((this.getHeuristic() + this.getCost()) > (s.getHeuristic() + s.getCost()))
 			return 1;
 		if ((this.getHeuristic() + this.getCost()) == (s.getHeuristic() + s.getCost()))
 			return 0;
 		if ((this.getHeuristic() + this.getCost()) < (s.getHeuristic() + s.getCost()))
 			return -1;
-		return 0;*/
-		return (this.getHeuristic() + this.getCost()) - (s.getHeuristic() + s.getCost());
+		return 0;
 	}
 	
 	public boolean isTerminalState() {
