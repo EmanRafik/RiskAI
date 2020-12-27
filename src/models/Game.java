@@ -331,8 +331,11 @@ public class Game {
 		int i = 0;
 		while (playerArmy > 0) {
 			int idx = permutation.get(i);
-			territories[idx].setTroopsCount(territories[idx].getTroopsCount() + 1);
-			playerArmy--;
+			territories[idx].setTroopsCount(territories[idx].getTroopsCount() + 2);
+			playerArmy-=2;
+			//Handle the case if number of troops remaining was odd
+			if(playerArmy == -1)
+				territories[idx].setTroopsCount(territories[idx].getTroopsCount() -1);
 			i++;
 			if (i == permutation.size())
 				i = 0;
