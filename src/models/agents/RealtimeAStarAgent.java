@@ -13,7 +13,6 @@ import models.Territory;
 public class RealtimeAStarAgent extends Player {
 	private PriorityQueue<State> searchHeap;
 
-
 	public RealtimeAStarAgent(int id) {
 		super(id);
 	}
